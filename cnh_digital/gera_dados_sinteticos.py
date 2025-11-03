@@ -1,6 +1,19 @@
 import csv
 import random
 from faker import Faker
+from faker.providers import person, ssn
+import unicodedata
+
+def remover_acentos(texto: str) -> str:
+    """
+    Remove acentos e cedilhas de qualquer string.
+    """
+    if not isinstance(texto, str):
+        return texto
+    return ''.join(
+        c for c in unicodedata.normalize('NFD', texto)
+        if unicodedata.category(c) != 'Mn'
+    )
 
 def gerar_csv(qtd_itens, nome_arquivo="dados_fakes.csv"):
     fake = Faker('pt_BR')
@@ -12,8 +25,11 @@ def gerar_csv(qtd_itens, nome_arquivo="dados_fakes.csv"):
             "validade", "doc_identida", "org_emissor", "uf_4c", "cpf", "num_regis", "categoria", "pai", "mae", "assinatura"])
         for _ in range(qtd_itens):
             nome = fake.name()
+            nome_sem_acentos = remover_acentos(nome)
             tipo = random.choice(categoria_hab)
-            escritor.writerow([nome, tipo])
+            cpf = fake.cpf()
+
+            escritor.writerow([nome_sem_acentos, tipo, "", "", "", "","", "", "", "", cpf, "", "", "", "", "" ])
 
     print(f"{qtd_itens} registros salvos em '{nome_arquivo}'")
 
