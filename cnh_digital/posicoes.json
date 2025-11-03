@@ -1,0 +1,19 @@
+{
+    "nome_completo": [164, 203],
+    "prim_habi": [578, 203],
+    "data_nasci": [176, 108],
+    "local_nasci": [223, 108],
+    "uf_3": [273, 108],
+    "data_emissao": [177, 131],
+    "validade": [245, 131],
+    "doc_identida": [177, 153],
+    "org_emissor": [225, 153],
+    "uf_4c": [239, 153],
+    "cpf": [178, 177],
+    "num_regis": [256, 177],
+    "categoria": [327, 177],
+    "pai": [178, 222],
+    "mae": [178, 247],
+    "assinatura": [62, 252]
+
+}
