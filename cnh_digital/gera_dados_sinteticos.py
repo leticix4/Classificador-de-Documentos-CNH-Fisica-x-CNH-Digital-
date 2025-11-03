@@ -8,7 +8,7 @@ def gerar_csv(qtd_itens, nome_arquivo="dados_fakes.csv"):
 
     with open(nome_arquivo, mode='w', newline='', encoding='utf-8') as arquivo:
         escritor = csv.writer(arquivo)
-        escritor.writerow(["nome_completo", "prim_habi", "data_local_uf", "data_emissao", "doc_identida_org_emissor_uf", "cpf", "num_regis", "categoria", "filiacao", "assinatura"])
+        escritor.writerow(["nome_completo", "prim_habi", "data_local_uf", "data_emissao", "validade", "doc_identida_org_emissor_uf", "cpf", "num_regis", "categoria", "filiacao", "assinatura"])
         for _ in range(qtd_itens):
             nome = fake.name()
             tipo = random.choice(categoria_hab)
