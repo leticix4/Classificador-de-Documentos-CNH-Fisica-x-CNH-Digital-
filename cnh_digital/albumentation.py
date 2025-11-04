@@ -3,8 +3,8 @@ import albumentations as A
 import os
 import numpy as np
 
-pasta_entrada = "imagens_geradas"
-pasta_saida = "imagens_transformadas"
+pasta_entrada = "cnh_digital/imagens_geradas"
+pasta_saida = "cnh_digital/imagens_transformadas"
 os.makedirs(pasta_entrada, exist_ok=True)
 os.makedirs(pasta_saida, exist_ok=True)
 
