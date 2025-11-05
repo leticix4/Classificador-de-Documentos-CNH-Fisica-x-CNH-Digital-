@@ -4,7 +4,7 @@ import json
 import os
 import sys
 
-quantidade_imagens= 6
+quantidade_imagens= 15
 imagem_base = 'CNHFisica.jpg'
 csv_arquivo = 'dados_fakes.csv'
 json_arquivo = 'posicoes.json'
@@ -57,7 +57,28 @@ def gerar_imagens (quantidade_imagens, imagem_base, csv_arquivo,
 
     cv2.putText(imagem, dado['validade'], tuple (dados_json['validade']),
                 fonte, tamanho_fonte, cor_fonte, 1, cv2.LINE_AA)
+    
+    cv2.putText(imagem, dado['doc_identida'], tuple (dados_json['doc_identida']),
+                fonte, tamanho_fonte, cor_fonte, 1, cv2.LINE_AA)
+    
+    cv2.putText(imagem, dado['org_emissor'], tuple (dados_json['org_emissor']),
+                fonte, tamanho_fonte, cor_fonte, 1, cv2.LINE_AA)
 
+    cv2.putText(imagem, dado['uf_4c'], tuple (dados_json['uf_4c']),
+                fonte, tamanho_fonte, cor_fonte, 1, cv2.LINE_AA)
+
+    cv2.putText(imagem, dado['cpf'], tuple (dados_json['cpf']),
+                fonte, tamanho_fonte, cor_fonte, 1, cv2.LINE_AA)
+    
+    cv2.putText(imagem, dado['pai'], tuple (dados_json['pai']),
+                fonte, tamanho_fonte, cor_fonte, 1, cv2.LINE_AA)
+    
+    cv2.putText(imagem, dado['mae'], tuple (dados_json['mae']),
+                fonte, tamanho_fonte, cor_fonte, 1, cv2.LINE_AA)
+    
+    cv2.putText(imagem, dado['assinatura'], tuple (dados_json['assinatura']),
+                fonte, tamanho_fonte, cor_fonte, 1, cv2.LINE_AA)
+    
     nome_saida = os.path.join(pasta_saida, f'imagem_{id_item}.jpg')
     cv2.imwrite(nome_saida, imagem)
 

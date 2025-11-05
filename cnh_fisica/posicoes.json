@@ -6,15 +6,15 @@
     "uf_3": [1024, 380],
     "data_emissao": [585, 455],
     "validade": [860, 455],
-    "doc_identida": [177, 153],
-    "org_emissor": [225, 153],
-    "uf_4c": [239, 153],
-    "cpf": [178, 177],
-    "num_regis": [256, 177],
+    "doc_identida": [586, 515],
+    "org_emissor": [795, 515],
+    "uf_4c": [850, 515],
+    "cpf": [586, 583],
+    "num_regis": [847, 583],
     "categoria": [327, 177],
-    "pai": [178, 222],
-    "mae": [178, 247],
-    "assinatura": [62, 252]
+    "pai": [589, 726],
+    "mae": [589, 780],
+    "assinatura": [232, 862]
 
 
 }
