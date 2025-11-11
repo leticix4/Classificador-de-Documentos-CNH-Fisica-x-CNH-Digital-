@@ -158,8 +158,8 @@ def gerar_imagens(quantidade_imagens, imagem_base, csv_arquivo,
         print(f"Adicionando foto: {os.path.basename(caminho_face)}")
         
         # mod de tamanho e posicao da biometria
-        posicao_foto = (160, 250)  
-        tamanho_foto = (170, 270)  
+        posicao_foto = (160, 240)  
+        tamanho_foto = (150, 240)  
         
         imagem = adicionar_biometria_foto(imagem, caminho_face, posicao_foto, tamanho_foto)
         nome_saida = os.path.join(pasta_saida, f'cnh_{id_item:03d}.jpg')
