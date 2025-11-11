@@ -4,48 +4,64 @@ import json
 import os
 import glob
 
-
 script_dir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_dir)  
 
 quantidade_imagens = 10
 imagem_base = 'cnh_img_base.jpeg'
-csv_arquivo = '../dados_fakes.csv'
+csv_arquivo = 'dados_fakes.csv'
 json_arquivo = 'posicoes.json'
-pasta_saida = '../imagens_geradas'
-pasta_faces = '../imagens_faces'  
+pasta_saida = 'imagens_geradas'
+pasta_faces = '../imagens_faces'
 
 
-def adicionar_biometria_foto(imagem, imagem_face, posicao=(204, 405), escala=0.3):
-    biometria = cv2.imread(imagem_face, cv2.IMREAD_UNCHANGED)
-    if biometria is None:
-        print(f"❌ Imagem de biometria '{imagem_face}' não encontrada.")
+def adicionar_biometria_foto(imagem, caminho_face, posicao=(500, 1000), tamanho=(900, 900)):
+    """
+    Adiciona foto da face na CNH
+    
+    Args:
+        imagem: Imagem da CNH (array numpy)
+        caminho_face: Caminho completo da foto da face
+        posicao: Tupla (x, y) para posição da foto
+        tamanho: Tupla (largura, altura) do tamanho final da foto
+    """
+    try:
+        # Carregar foto da face
+        face = cv2.imread(caminho_face)
+        
+        if face is None:
+            print(f"ERRO: Não foi possível ler: {caminho_face}")
+            return imagem
+        
+        print(f"✓ Face carregada: {face.shape}")
+        
+        # Redimensionar para o tamanho desejado
+        face_resized = cv2.resize(face, tamanho, interpolation=cv2.INTER_AREA)
+        print(f"✓ Face redimensionada para: {face_resized.shape}")
+        
+        # Extrair posição e dimensões
+        x, y = posicao
+        h, w = face_resized.shape[:2]
+        
+        # Verificar se cabe na imagem
+        if y + h > imagem.shape[0] or x + w > imagem.shape[1]:
+            print(f"AVISO: Foto não cabe na posição ({x}, {y})")
+            print(f"CNH: {imagem.shape[1]}x{imagem.shape[0]}")
+            print(f"Foto: {w}x{h}")
+            print(f"Fim da foto: ({x+w}, {y+h})")
+            return imagem
+        
+        # Sobrepor a foto na CNH
+        imagem[y:y+h, x:x+w] = face_resized
+        print(f"Foto adicionada com sucesso em ({x}, {y})")
+        
         return imagem
-
-    largura = int(biometria.shape[1] * escala)
-    altura = int(biometria.shape[0] * escala)
-    biometria = cv2.resize(biometria, (largura, altura), interpolation=cv2.INTER_AREA)
-
-    x, y = posicao
-    y1, y2 = y, y + biometria.shape[0]
-    x1, x2 = x, x + biometria.shape[1]
-
-    if x2 > imagem.shape[1] or y2 > imagem.shape[0]:
-        print("⚠️ Foto fora dos limites da CNH.")
+        
+    except Exception as e:
+        print(f"ERRO na função adicionar_biometria_foto: {e}")
+        import traceback
+        traceback.print_exc()
         return imagem
-
-    if biometria.shape[2] == 4:
-        alpha = biometria[:, :, 3] / 255.0
-        alpha = alpha[..., None]
-        biometria_rgb = biometria[:, :, :3].astype(float)
-        imagem[y1:y2, x1:x2] = (
-            alpha * biometria_rgb + (1 - alpha) * imagem[y1:y2, x1:x2].astype(float)
-        ).astype('uint8')
-    else:
-        imagem[y1:y2, x1:x2] = biometria
-
-    print(f"✅ Foto '{imagem_face}' adicionada em {posicao}")
-    return imagem
 
 
 def gerar_imagens(quantidade_imagens, imagem_base, csv_arquivo,
@@ -55,62 +71,79 @@ def gerar_imagens(quantidade_imagens, imagem_base, csv_arquivo,
     cor_fonte = (0, 0, 0)
     fonte = cv2.FONT_HERSHEY_DUPLEX
 
-    print(f"Trabalhando no diretório: {os.getcwd()}")
-
+    print("="*70)
+    print("INICIANDO GERADOR DE CNH COM FOTOS")
+    print("="*70)
+    print(f"\nDiretório de trabalho: {os.getcwd()}\n")
+    print("Verificando arquivos necessários...")
     for arquivo in [imagem_base, csv_arquivo, json_arquivo]:
-        if not os.path.exists(arquivo):
-            print(f"ERRO: '{arquivo}' não encontrado em {os.getcwd()}")
+        existe = os.path.exists(arquivo)
+        if not existe:
+            print(f"Caminho completo: {os.path.abspath(arquivo)}")
             return
 
-    if not os.path.exists(pasta_faces):
-        print(f"ERRO: Pasta '{pasta_faces}' não encontrada em {os.getcwd()}")
+    # Verificar pasta de faces
+    existe_pasta = os.path.exists(pasta_faces)
+    if not existe_pasta:
+        print(f"Caminho completo: {os.path.abspath(pasta_faces)}")
         return
-    
     dados_csv = []
     with open(csv_arquivo, newline='', encoding='utf-8') as f:
         leitor = csv.DictReader(f)
         for linha in leitor:
             dados_csv.append(linha)
-
-    print(f"{len(dados_csv)} registros carregados do CSV")
-
-    # Ler posições do JSON
+    print(f" {len(dados_csv)} registros carregados")
     with open(json_arquivo, 'r', encoding='utf-8') as f:
         dados_json = json.load(f)
-        print(f"Posições carregadas: {list(dados_json.keys())}")
+    print(f"✓ {len(dados_json)} posições carregadas")
 
-    # Criar pasta de saída
+    # cria pasta de saída
     os.makedirs(pasta_saida, exist_ok=True)
+    print(f"\n📂 Pasta de saída: {os.path.abspath(pasta_saida)}")
 
     quantidade_imagens = min(quantidade_imagens, len(dados_csv))
 
-    # Campos a serem preenchidos
+    # campos preenchidos
     campos = [
         "nome_completo", "prim_habi", "data_nasci", "local_nasci", "uf_3",
         "data_emissao", "validade", "doc_identida", "org_emissor",
         "uf_4c", "cpf", "num_regis", "categoria", "pai", "mae", "assinatura"
     ]
-
-    # Obter lista de imagens de faces disponíveis
-    imagens_faces = glob.glob(os.path.join(pasta_faces, "*.jpg")) + \
-                   glob.glob(os.path.join(pasta_faces, "*.jpeg")) + \
-                   glob.glob(os.path.join(pasta_faces, "*.png"))
+    extensoes = ["*.jpg", "*.jpeg", "*.png", "*.JPG", "*.JPEG", "*.PNG"]
+    imagens_faces = []
+    for ext in extensoes:
+        imagens_faces.extend(glob.glob(os.path.join(pasta_faces, ext)))
     
     if not imagens_faces:
-        print(f"❌ Nenhuma imagem encontrada na pasta '{pasta_faces}'")
+        print(f"NENHUMA imagem encontrada em '{pasta_faces}'")
+        print(f"Caminho completo: {os.path.abspath(pasta_faces)}")
+        print(f"Extensões buscadas: {extensoes}")
         return
 
-    print(f"📸 {len(imagens_faces)} imagens de biometria encontradas")
+    print(f"✓ {len(imagens_faces)} imagens encontradas:")
+    for i, img in enumerate(imagens_faces[:5], 1): 
+        print(f"   {i}. {os.path.basename(img)}")
+    if len(imagens_faces) > 5:
+        print(f"   ... e mais {len(imagens_faces) - 5}")
 
     # Gerar imagens
+    print(f"\n{'='*70}")
+    print(f"GERANDO {quantidade_imagens} IMAGENS")
+    print(f"{'='*70}\n")
+
     for id_item, dado in enumerate(dados_csv[:quantidade_imagens], start=1):
+        print(f"\n--- Imagem {id_item}/{quantidade_imagens} ---")
+        
+        # carrega imagem base
         imagem = cv2.imread(imagem_base)
         
         if imagem is None:
             print(f"ERRO: Não foi possível carregar '{imagem_base}'")
             return
+        
+        print(f"✓ CNH base carregada: {imagem.shape[1]}x{imagem.shape[0]} pixels")
 
-        # Adicionar cada campo na imagem
+        # add textos
         for campo in campos:
             if campo in dado and campo in dados_json:
                 texto = str(dado[campo])
@@ -118,22 +151,35 @@ def gerar_imagens(quantidade_imagens, imagem_base, csv_arquivo,
                 cv2.putText(imagem, texto, posicao, fonte, 
                            tamanho_fonte, cor_fonte, espessura, cv2.LINE_AA)
 
-        # ADIÇÃO: Adicionar biometria/foto da pessoa
-        # Usar imagem de face correspondente ao índice (cíclico se houver menos faces que imagens)
-        imagem_face = imagens_faces[(id_item - 1) % len(imagens_faces)]
+        # add biometria
+        idx_face = (id_item - 1) % len(imagens_faces)
+        caminho_face = imagens_faces[idx_face]
         
-        # Posição da foto na CNH (ajuste conforme necessário)
-        posicao_foto = (204, 405)  # Exemplo - ajuste para sua CNH
+        print(f"Adicionando foto: {os.path.basename(caminho_face)}")
         
-        imagem = adicionar_biometria_foto(imagem, imagem_face, posicao_foto)
- 
-        # Salvar imagem
-        nome_saida = os.path.join(pasta_saida, f'imagem_{id_item}.jpg')
-        cv2.imwrite(nome_saida, imagem)
-        print(f"✓ Imagem {id_item}/{quantidade_imagens} salva")
+        # mod de tamanho e posicao da biometria
+        posicao_foto = (160, 250)  
+        tamanho_foto = (170, 270)  
+        
+        imagem = adicionar_biometria_foto(imagem, caminho_face, posicao_foto, tamanho_foto)
+        nome_saida = os.path.join(pasta_saida, f'cnh_{id_item:03d}.jpg')
+        sucesso = cv2.imwrite(nome_saida, imagem)
+        
+        if sucesso:
+            print(f"Salva: {nome_saida}")
+        else:
+            print(f"ERRO ao salvar: {nome_saida}")
 
-    print(f"\n✓ Concluído! {quantidade_imagens} imagens em '{pasta_saida}'")
+    print(f"\n{'='*70}")
+    print(f"CONCLUÍDO! {quantidade_imagens} imagens geradas")
+    print(f"{'='*70}")
 
 
-gerar_imagens(quantidade_imagens, imagem_base, csv_arquivo,
-              json_arquivo, pasta_saida)
+# Executar
+try:
+    gerar_imagens(quantidade_imagens, imagem_base, csv_arquivo,
+                  json_arquivo, pasta_saida)
+except Exception as e:
+    print(f"\nERRO: {e}")
+    import traceback
+    traceback.print_exc()

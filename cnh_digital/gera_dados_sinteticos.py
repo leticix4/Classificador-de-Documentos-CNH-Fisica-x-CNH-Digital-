@@ -17,21 +17,12 @@ def remover_acentos(texto: str) -> str:
     )
 
 def gerar_numero_registro_cnh():
-    """
-    Gera um número de registro de CNH (11 dígitos).
-    """
     return ''.join([str(random.randint(0, 9)) for _ in range(11)])
 
 def gerar_rg():
-    """
-    Gera um número de RG no formato XX.XXX.XXX-X.
-    """
     return f"{random.randint(10, 99)}.{random.randint(100, 999)}.{random.randint(100, 999)}-{random.randint(0, 9)}"
 
 def gerar_orgao_emissor():
-    """
-    Gera um órgão emissor de RG comum no Brasil.
-    """
     orgaos = ["SSP", "DETRAN", "PC", "IFP", "IIRGD", "IPF"]
     return random.choice(orgaos)
 
@@ -53,14 +44,10 @@ def gerar_csv(qtd_itens, nome_arquivo="dados_fakes.csv"):
             nome_sem_acentos = remover_acentos(nome)
             tipo = random.choice(categoria_hab)
             cpf = fake.cpf()
-            
-            # Data de nascimento (entre 18 e 80 anos atrás)
             data_nascimento = fake.date_of_birth(minimum_age=18, maximum_age=80)
             data_nasci_formatada = data_nascimento.strftime("%d/%m/%Y")                      
             local_nascimento = remover_acentos(fake.city())
             uf_nascimento = random.choice(estados_br)
-            
-            # Data de emissão (entre 1 e 10 anos atrás)
             data_emissao = fake.date_between(start_date='-10y', end_date='-1y')
             data_emissao_formatada = data_emissao.strftime("%d/%m/%Y")
             validade = data_emissao + timedelta(days=365*10)
@@ -74,26 +61,25 @@ def gerar_csv(qtd_itens, nome_arquivo="dados_fakes.csv"):
             nome_mae = fake.name_female()
             nome_mae_sem_acentos = remover_acentos(nome_mae)
             
-            # Assinatura (mesmo que o nome completo)
             assinatura = nome_sem_acentos
 
             escritor.writerow([
-                nome_sem_acentos,           # nome_completo
-                tipo,                        # prim_habi
-                data_nasci_formatada,       # data_nasci
-                local_nascimento,           # local_nasci
-                uf_nascimento,              # uf_3
-                data_emissao_formatada,     # data_emissao
-                validade_formatada,         # validade
-                rg,                         # doc_identida
-                orgao_emissor,              # org_emissor
-                uf_rg,                      # uf_4c
-                cpf,                        # cpf
-                num_registro,               # num_regis
-                tipo,                       # categoria (mesma da prim_habi)
-                nome_pai_sem_acentos,       # pai
-                nome_mae_sem_acentos,       # mae
-                assinatura                  # assinatura
+                nome_sem_acentos,           
+                tipo,                        
+                data_nasci_formatada,       
+                local_nascimento,           
+                uf_nascimento,              
+                data_emissao_formatada,     
+                validade_formatada,         
+                rg,                         
+                orgao_emissor,              
+                uf_rg,                      
+                cpf,                        
+                num_registro,               
+                tipo,                       
+                nome_pai_sem_acentos,       
+                nome_mae_sem_acentos,       
+                assinatura                  
             ])
 
     print(f"{qtd_itens} registros salvos em '{nome_arquivo}'")
