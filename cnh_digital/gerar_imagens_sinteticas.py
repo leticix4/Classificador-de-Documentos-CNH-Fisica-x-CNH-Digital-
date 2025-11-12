@@ -33,13 +33,11 @@ def adicionar_biometria_foto(imagem, caminho_face, posicao=(500, 1000), tamanho=
             print(f"ERRO: Não foi possível ler: {caminho_face}")
             return imagem
         
-        print(f"✓ Face carregada: {face.shape}")
+        print(f"Face carregada: {face.shape}")
         
-        # Redimensionar para o tamanho desejado
+        # Redimensiona para o tamanho desejado
         face_resized = cv2.resize(face, tamanho, interpolation=cv2.INTER_AREA)
         print(f"✓ Face redimensionada para: {face_resized.shape}")
-        
-        # Extrair posição e dimensões
         x, y = posicao
         h, w = face_resized.shape[:2]
         
@@ -66,7 +64,7 @@ def adicionar_biometria_foto(imagem, caminho_face, posicao=(500, 1000), tamanho=
 
 def gerar_imagens(quantidade_imagens, imagem_base, csv_arquivo,
                   json_arquivo, pasta_saida):
-    tamanho_fonte = 0.3
+    tamanho_fonte = 0.5
     espessura = 1
     cor_fonte = (0, 0, 0)
     fonte = cv2.FONT_HERSHEY_DUPLEX
@@ -158,8 +156,8 @@ def gerar_imagens(quantidade_imagens, imagem_base, csv_arquivo,
         print(f"Adicionando foto: {os.path.basename(caminho_face)}")
         
         # mod de tamanho e posicao da biometria
-        posicao_foto = (158, 230)  
-        tamanho_foto = (170, 250)  
+        posicao_foto = (215, 295)  
+        tamanho_foto = (290, 380)  
         
         imagem = adicionar_biometria_foto(imagem, caminho_face, posicao_foto, tamanho_foto)
         nome_saida = os.path.join(pasta_saida, f'cnh_{id_item:03d}.jpg')
