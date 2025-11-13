@@ -1,101 +1,101 @@
 nome_completo,prim_habi,data_nasci,local_nasci,uf_3,data_emissao,validade,doc_identida,org_emissor,uf_4c,cpf,num_regis,categoria,pai,mae,assinatura
-Joao Gabriel Farias,A,12/12/1998,Albuquerque,RR,04/09/2020,02/09/2030,32.367.120-6,SSP,PE,732.410.658-71,75611958014,A,Joao Miguel Carvalho,Melina Carvalho,Joao Gabriel Farias
-Matteo Cavalcanti,D,26/10/1999,da Conceicao,RR,19/03/2019,16/03/2029,38.417.970-1,IIRGD,AL,826.097.145-30,63760825301,D,Joao Guilherme Vargas,Lorena Camargo,Matteo Cavalcanti
-Dra. Ana Clara Rodrigues,B,15/04/2002,Rocha,RJ,07/05/2018,04/05/2028,85.938.990-6,IFP,RO,803.572.916-03,79364900200,B,Sr. Jose Jesus,Rebeca da Rocha,Dra. Ana Clara Rodrigues
-Ryan Marques,E,12/11/1994,da Paz,MG,24/11/2017,22/11/2027,43.343.671-0,PC,AM,269.845.170-01,87348689781,E,Lucca Camara,Heloisa Casa Grande,Ryan Marques
-Sra. Maria Luisa Rodrigues,C,27/03/1980,Nascimento do Amparo,BA,10/03/2024,08/03/2034,28.429.207-4,IFP,PA,924.718.630-78,72701469761,C,Sr. Davi Miguel Jesus,Isis Casa Grande,Sra. Maria Luisa Rodrigues
-Maria Sophia Farias,C,14/11/1999,Castro de Rodrigues,SE,25/10/2020,23/10/2030,75.683.441-4,SSP,GO,351.246.089-51,67380648989,C,Joao Lucas Gomes,Dra. Maysa Castro,Maria Sophia Farias
-Eduardo Brito,A,01/09/1977,Vasconcelos Alegre,RN,13/06/2016,11/06/2026,78.152.367-0,IFP,AC,529.841.067-76,21826716439,A,Pedro Lucas Gomes,Emilly Silveira,Eduardo Brito
-Isaque Lima,B,09/12/1968,Cavalcante Alegre,TO,11/06/2016,09/06/2026,49.401.984-9,IFP,BA,905.384.721-97,78281408707,B,Rhavi da Mata,Nicole Goncalves,Isaque Lima
-Emanuelly Dias,A,25/07/1955,Albuquerque,RS,13/06/2022,10/06/2032,82.815.336-6,DETRAN,AP,431.729.085-50,36449698104,A,Juan Lopes,Isadora Aragao,Emanuelly Dias
-Dr. Joao Felipe Ferreira,A,04/03/1948,Camargo,MG,04/10/2021,02/10/2031,96.401.706-3,SSP,TO,196.438.520-24,73572704288,A,Dante Cavalcanti,Cecilia Rezende,Dr. Joao Felipe Ferreira
-Benjamim da Mata,D,10/06/1998,Albuquerque,MA,09/11/2015,06/11/2025,79.871.309-4,IFP,AP,904.765.318-10,23846155919,D,Marcelo da Cunha,Lara Caldeira,Benjamim da Mata
-Gustavo Castro,C,31/01/1953,Araujo da Mata,MT,03/03/2017,01/03/2027,60.726.637-6,DETRAN,PR,569.780.142-49,83715535478,C,Antonio da Cunha,Brenda da Cunha,Gustavo Castro
-Luana da Conceicao,B,17/04/2006,Cunha do Amparo,AM,10/03/2022,07/03/2032,32.570.102-1,SSP,PB,249.651.870-67,40441681608,B,Lucas Gomes,Maria Eduarda Fernandes,Luana da Conceicao
-Gael Viana,E,20/09/1948,Garcia,SC,28/06/2018,25/06/2028,15.787.384-5,IPF,SC,209.375.864-47,03260057998,E,Yago Azevedo,Rafaela Pires,Gael Viana
-Vicente da Luz,E,20/08/1956,Melo,AM,16/01/2020,13/01/2030,22.241.761-9,DETRAN,PE,046.359.782-65,26552944811,E,Pietro Leao,Dra. Maria Luisa Peixoto,Vicente da Luz
-Vitor Duarte,C,02/08/1951,Nogueira de Novaes,PE,25/11/2015,22/11/2025,45.465.860-6,PC,PI,462.179.508-20,51621209313,C,Sr. Thales Cassiano,Cecilia Moreira,Vitor Duarte
-Henry Gabriel Alves,B,29/01/2004,Cardoso,RN,01/02/2020,29/01/2030,29.683.824-1,IIRGD,PB,502.381.967-12,54740403561,B,Bryan Sousa,Julia da Costa,Henry Gabriel Alves
-Theo Leao,E,29/10/1987,Andrade,MS,13/04/2022,10/04/2032,22.615.469-7,IPF,PB,972.140.863-87,43011145910,E,Arthur Gabriel Mendes,Ana Livia Rocha,Theo Leao
-Luna Guerra,B,10/12/1975,Nascimento de da Mota,MG,13/04/2023,10/04/2033,16.240.168-0,DETRAN,GO,704.926.385-00,29105565865,B,Davi Luiz Novaes,Allana Moreira,Luna Guerra
-Josue Macedo,B,01/06/2006,Vieira,AC,17/02/2022,15/02/2032,17.230.180-8,SSP,AM,074.912.586-11,20069395674,B,Davi Lucca Borges,Maya Cirino,Josue Macedo
-Maria Laura Ribeiro,D,22/08/1986,Correia Verde,SC,21/08/2021,19/08/2031,25.148.293-1,IIRGD,AL,147.902.586-02,09003813423,D,Levi Pires,Lorena Montenegro,Maria Laura Ribeiro
-Dr. Bento Almeida,C,25/11/2004,Rezende,PA,19/03/2024,17/03/2034,19.253.919-9,DETRAN,AP,543.019.682-70,20622015962,C,Nicolas da Cunha,Dra. Pietra Cavalcante,Dr. Bento Almeida
-Maria Laura da Rosa,E,24/04/1952,Rezende,ES,10/04/2019,07/04/2029,74.450.882-2,SSP,RR,582.913.674-00,39569713068,E,Enrico Alves,Dra. Maria Alice Viana,Maria Laura da Rosa
-Luana Barbosa,D,26/05/1989,Vasconcelos do Sul,RN,07/09/2018,04/09/2028,40.109.772-0,PC,MT,658.301.974-48,42196177194,D,Diogo Freitas,Catarina Cirino,Luana Barbosa
-Ana Vitoria Novaes,C,22/12/1983,Duarte,TO,14/12/2023,11/12/2033,98.279.724-3,SSP,RO,602.789.513-68,69708178549,C,Leonardo Caldeira,Dra. Brenda Abreu,Ana Vitoria Novaes
-Sra. Larissa Gomes,B,13/03/1964,Monteiro,TO,06/03/2018,03/03/2028,54.785.730-0,SSP,RN,653.074.819-93,20163797067,B,Luiz Miguel Castro,Melissa Peixoto,Sra. Larissa Gomes
-Dra. Ana Livia Vieira,A,25/03/1996,Machado da Praia,RS,14/02/2024,11/02/2034,21.233.143-9,IPF,MG,419.052.876-58,69518473937,A,Rhavi Novaes,Valentina Goncalves,Dra. Ana Livia Vieira
-Andre Duarte,E,20/03/1961,Jesus,MG,11/12/2020,09/12/2030,40.196.918-5,DETRAN,MA,756.914.083-48,25771741739,E,Sr. Asafe Santos,Maria Alice Cardoso,Andre Duarte
-Sara Silva,B,19/09/1994,Rezende de Goias,MT,20/03/2020,18/03/2030,52.346.987-8,IFP,GO,563.478.190-66,49727350861,B,Dr. Nathan Vieira,Ana Cecilia da Rocha,Sara Silva
-Maria Luisa Rocha,D,05/10/1979,Albuquerque de Porto,SP,27/10/2017,25/10/2027,66.117.545-1,PC,PI,053.194.782-32,98115037630,D,Josue da Conceicao,Olivia Ribeiro,Maria Luisa Rocha
-Ana Livia Siqueira,D,07/01/1956,Almeida de Costela,AP,29/01/2019,26/01/2029,80.921.236-1,IFP,AC,069.234.857-38,27374312443,D,Joao Vitor Ribeiro,Raquel Monteiro,Ana Livia Siqueira
-Jose Pedro Camargo,C,31/01/1973,Santos,SP,09/10/2021,07/10/2031,70.187.336-8,PC,PI,405.873.269-56,94549785772,C,Sr. Renan da Mota,Maria Sophia Cunha,Jose Pedro Camargo
-Augusto Montenegro,B,07/10/2004,Silveira,RJ,30/03/2021,28/03/2031,99.696.215-8,IPF,TO,483.017.926-04,56104874781,B,Noah da Costa,Maria Luisa Correia,Augusto Montenegro
-Luara Martins,E,13/01/1992,Fogaca Paulista,RS,24/04/2018,21/04/2028,46.689.827-2,IFP,CE,361.950.487-39,25508972879,E,Sr. Augusto da Mata,Julia Sa,Luara Martins
-Maite Novais,A,31/07/1986,Barbosa,GO,13/09/2020,11/09/2030,93.547.917-1,PC,MS,394.182.706-50,65821749171,A,Vinicius da Luz,Maite Alves,Maite Novais
-Oliver Camara,A,18/04/1958,Garcia,MS,05/02/2016,02/02/2026,95.688.633-7,PC,AL,318.967.245-82,86667278838,A,Davi Miguel Machado,Maria Almeida,Oliver Camara
-Thiago Sampaio,B,24/06/1972,Camara,DF,07/12/2022,04/12/2032,96.670.499-5,IFP,AM,159.628.403-05,10955522216,B,Ravi Lucca Gomes,Barbara Aragao,Thiago Sampaio
-Julia Novaes,B,23/11/2002,Sales de Albuquerque,PI,08/01/2022,06/01/2032,75.384.151-3,IPF,GO,528.079.613-12,73409824123,B,Otavio Aparecida,Melissa Borges,Julia Novaes
-Matheus Moura,D,19/01/1989,Camargo da Serra,PR,01/03/2021,27/02/2031,65.506.225-3,IPF,PI,456.289.170-01,32416598300,D,Rael Araujo,Antonella Sales,Matheus Moura
-Caroline Cavalcanti,C,17/05/1971,Vargas,SP,07/12/2017,05/12/2027,87.651.457-7,IIRGD,RR,163.729.084-50,06583156382,C,Heitor Guerra,Melina Ribeiro,Caroline Cavalcanti
-Mariane Fonseca,E,02/06/1971,Guerra,RO,19/05/2023,16/05/2033,44.658.862-1,IPF,PA,641.027.583-80,21254257999,E,Vinicius Lopes,Maria Julia Costa,Mariane Fonseca
-Ayla da Paz,E,01/12/2002,das Neves Alegre,RO,14/07/2020,12/07/2030,48.612.749-6,IFP,BA,357.209.816-59,39519012686,E,Isaque Rocha,Dra. Agatha da Costa,Ayla da Paz
-Melissa Barros,B,17/10/1958,Martins,PA,15/01/2022,13/01/2032,53.970.771-1,IIRGD,PA,420.869.537-47,70014306448,B,Valentim Dias,Maria Julia Vasconcelos,Melissa Barros
-Benicio Mendonca,E,19/11/1951,da Luz,PB,28/02/2022,26/02/2032,12.678.549-2,SSP,ES,023.869.471-22,95951821954,E,Sr. Vicente da Rosa,Dra. Jade Siqueira,Benicio Mendonca
-Gael Leao,D,10/09/1978,Duarte do Oeste,MT,28/02/2017,26/02/2027,11.198.633-8,IIRGD,RJ,327.819.546-91,69202617854,D,Thomas da Mota,Dra. Helena da Costa,Gael Leao
-Yago Borges,D,03/12/1954,Pinto de Correia,SC,01/01/2023,29/12/2032,51.212.429-4,SSP,PI,175.364.829-73,98602780528,D,Theo Gomes,Aurora Brito,Yago Borges
-Heloisa Siqueira,E,06/03/1956,Pereira,ES,18/05/2019,15/05/2029,45.204.737-4,DETRAN,TO,687.093.542-47,63332972025,E,Jose Brito,Agatha Vargas,Heloisa Siqueira
-Rafael Aparecida,B,06/09/1964,Costa,SC,30/05/2022,27/05/2032,60.493.615-9,IPF,PI,234.675.901-52,34039701667,B,Kaique Ferreira,Laura Barros,Rafael Aparecida
-Maria Eduarda Mendonca,C,30/08/1953,Nogueira de Nascimento,TO,05/03/2018,02/03/2028,95.215.171-6,IFP,MA,654.219.730-34,30003204826,C,Caue Camara,Luisa Moraes,Maria Eduarda Mendonca
-Ana Laura Rezende,B,09/11/1960,Campos das Pedras,RJ,21/08/2020,19/08/2030,46.408.103-6,IFP,MS,390.154.287-60,75633599151,B,Caio da Luz,Ayla Pereira,Ana Laura Rezende
-Pietra Marques,E,13/05/1951,Correia de Souza,RO,11/02/2022,09/02/2032,97.843.235-7,SSP,MS,130.725.846-80,24531297261,E,Noah Rodrigues,Dra. Ana Julia Barros,Pietra Marques
-Sr. Vitor Cunha,B,15/05/1986,da Rocha de Melo,AC,09/03/2018,06/03/2028,56.109.676-5,IPF,CE,125.038.649-70,30849696281,B,Emanuel Cardoso,Evelyn Cavalcanti,Sr. Vitor Cunha
-Luana Campos,A,29/04/1972,Sousa de Minas,AL,11/02/2016,08/02/2026,46.112.290-8,PC,CE,216.408.357-17,07280977681,A,Sr. Raul Brito,Beatriz Leao,Luana Campos
-Joao Miguel Almeida,C,06/06/1952,Goncalves de Casa Grande,AM,22/10/2021,20/10/2031,62.145.702-6,IPF,AP,304.659.278-74,95918934403,C,Dr. Lucas Gabriel Nogueira,Heloisa da Costa,Joao Miguel Almeida
-Emanuelly da Rocha,A,09/10/1967,Oliveira,DF,19/04/2023,16/04/2033,42.329.263-2,IIRGD,PI,328.794.615-37,57941753426,A,Bruno Fonseca,Cecilia da Luz,Emanuelly da Rocha
-Sra. Ana Liz Garcia,C,11/09/1945,Oliveira,MS,01/01/2023,29/12/2032,48.469.443-2,IPF,RR,497.326.810-04,09614669924,C,Sr. Dante Ribeiro,Bruna Campos,Sra. Ana Liz Garcia
-Dra. Laura Brito,B,10/11/1977,Almeida,AC,03/11/2017,01/11/2027,55.806.731-6,IFP,PA,306.754.218-53,76161109160,B,Marcelo Carvalho,Eloa Sales,Dra. Laura Brito
-Diego Pinto,E,30/06/1973,Vasconcelos,SE,20/08/2019,17/08/2029,48.404.908-5,DETRAN,BA,760.351.982-95,67433875252,E,Antonio Leao,Milena Borges,Diego Pinto
-Pedro Henrique Ribeiro,E,10/01/2001,Monteiro,PR,25/09/2019,22/09/2029,64.197.555-7,IIRGD,RR,681.732.504-80,01140761778,E,Gabriel Castro,Clara da Mota,Pedro Henrique Ribeiro
-Davi Lucas Caldeira,A,16/06/1954,Freitas de Carvalho,GO,13/03/2019,10/03/2029,52.264.813-1,PC,PA,745.083.921-05,89383583179,A,Joao Vitor Nogueira,Evelyn Costela,Davi Lucas Caldeira
-Apollo Cavalcante,D,11/05/1969,Melo de Ferreira,PA,13/01/2019,10/01/2029,96.386.907-8,PC,RN,926.534.817-82,94795817638,D,Rafael Martins,Sra. Mariana Leao,Apollo Cavalcante
-Gabriela Montenegro,C,02/12/1966,Nascimento,SC,27/04/2018,24/04/2028,92.826.351-5,DETRAN,RS,169.452.837-55,88419122097,C,Jose Pedro da Rosa,Bruna Rocha,Gabriela Montenegro
-Caua Fernandes,C,07/08/1996,Oliveira,SE,31/01/2017,29/01/2027,12.270.228-1,IIRGD,SP,147.302.869-87,94488230987,C,Sr. Leandro da Costa,Nicole da Paz,Caua Fernandes
-Bruno Vieira,B,12/03/1981,Camara de Ferreira,DF,18/11/2023,15/11/2033,98.393.925-4,DETRAN,AM,765.130.894-84,76641153599,B,Sr. Luiz Henrique Sa,Isabelly Melo,Bruno Vieira
-Allana Andrade,E,02/05/1964,Albuquerque de Goias,SC,19/10/2022,16/10/2032,10.328.375-6,DETRAN,AP,495.138.062-51,49345656814,E,Vicente Alves,Maria Julia da Rocha,Allana Andrade
-Marcela Sousa,C,06/02/1982,Fonseca de Goias,AC,29/07/2017,27/07/2027,55.831.456-1,IFP,MS,761.834.259-82,93325413911,C,Heitor Cavalcante,Ester Sampaio,Marcela Sousa
-Emanuelly Lopes,E,10/06/1968,Machado,RN,10/01/2024,07/01/2034,72.996.475-1,IFP,RN,938.126.047-87,43807869480,E,Alexandre Jesus,Agatha Ramos,Emanuelly Lopes
-Zoe Jesus,C,17/01/1989,Casa Grande,MS,10/10/2019,07/10/2029,54.340.104-7,IFP,SP,916.508.743-75,41949740797,C,Augusto Vieira,Dra. Agatha Aparecida,Zoe Jesus
-Henry Gabriel Araujo,A,02/07/1979,Ferreira,MG,16/02/2021,14/02/2031,26.502.101-4,PC,MT,145.827.360-17,42531114008,A,Ravi Vasconcelos,Joana Nascimento,Henry Gabriel Araujo
-Mariah Albuquerque,A,30/05/2004,Lima dos Dourados,RO,05/07/2018,02/07/2028,89.799.980-1,IIRGD,PA,498.152.376-91,19884183678,A,Isaac Machado,Sophia Moura,Mariah Albuquerque
-Leo Pimenta,A,07/08/1970,Nunes da Serra,TO,07/02/2024,04/02/2034,73.730.816-1,DETRAN,SP,431.968.025-15,38537527820,A,Benjamim Aragao,Dra. Maria Julia Vargas,Leo Pimenta
-Marcelo Sales,A,26/10/1987,da Mata da Serra,PE,05/01/2018,03/01/2028,77.550.365-0,SSP,MA,456.897.023-74,77078463141,A,Marcelo Andrade,Maria Peixoto,Marcelo Sales
-Melissa Camara,D,21/08/1960,Marques do Sul,MA,18/10/2016,16/10/2026,48.702.121-4,SSP,MS,815.079.364-00,62778909085,D,Sr. Theo das Neves,Rebeca Sousa,Melissa Camara
-Bianca Dias,E,18/03/1959,Casa Grande de Dias,MA,12/06/2022,09/06/2032,29.671.775-3,SSP,PR,152.836.704-90,63792844725,E,Davi Luiz da Rosa,Clarice Barbosa,Bianca Dias
-Caleb Cavalcante,D,11/04/1963,Camargo de Marques,AP,29/01/2017,27/01/2027,11.886.642-1,SSP,AP,605.791.243-80,38721522149,D,Dr. Caleb Dias,Marcela Correia,Caleb Cavalcante
-Anthony Gabriel Vieira,A,09/03/1974,Jesus da Prata,AP,20/10/2022,17/10/2032,38.794.793-6,IIRGD,PB,614.297.803-04,41883089579,A,Otavio das Neves,Marina Pereira,Anthony Gabriel Vieira
-Agatha Peixoto,D,30/01/1977,Rodrigues de Goias,SC,14/05/2021,12/05/2031,80.762.134-5,IIRGD,RO,107.635.924-80,25579880745,D,Sr. Benicio Garcia,Lais Duarte,Agatha Peixoto
-Kaique Porto,B,08/05/1946,Araujo,PI,03/06/2020,01/06/2030,32.637.705-2,IFP,PR,724.910.653-80,14346901701,B,Alexandre Brito,Ana Julia Freitas,Kaique Porto
-Giovanna Vasconcelos,C,15/05/1994,da Conceicao,BA,02/11/2018,30/10/2028,62.769.147-5,DETRAN,SE,971.528.640-20,01681915722,C,Lorenzo Gomes,Emilly Sa,Giovanna Vasconcelos
-Rael Nunes,E,10/06/1991,Vieira,MA,02/06/2023,30/05/2033,59.750.282-2,IFP,MG,845.093.217-32,97349285211,E,Dr. Thales da Mota,Livia Ferreira,Rael Nunes
-Thiago Cavalcante,E,28/06/2005,Cirino Paulista,ES,27/02/2017,25/02/2027,35.634.313-7,IFP,AC,604.893.157-39,30295705681,E,Samuel Sales,Mariane Peixoto,Thiago Cavalcante
-Pedro Pires,A,09/04/1974,Cunha,RO,26/06/2017,24/06/2027,68.113.261-1,DETRAN,DF,236.048.519-98,72142270221,A,Bernardo Lopes,Ana Clara da Costa,Pedro Pires
-Maria da Cruz,C,03/03/1962,Lopes,MS,02/11/2024,31/10/2034,74.320.446-8,IIRGD,TO,471.326.089-40,98444226900,C,Caua Moura,Sofia Goncalves,Maria da Cruz
-Yago Pereira,A,02/12/1997,Cunha,DF,08/11/2021,06/11/2031,90.130.445-7,IIRGD,PE,153.098.264-24,74456473950,A,Dr. Isaque Macedo,Sra. Mariane Dias,Yago Pereira
-Davi Lucca Peixoto,B,25/06/1980,Casa Grande Paulista,RN,16/12/2016,14/12/2026,23.610.773-8,IFP,AC,948.015.327-05,59922906281,B,Ryan Oliveira,Yasmin Fogaca,Davi Lucca Peixoto
-Daniela Pinto,A,27/08/1947,Azevedo,RR,30/03/2023,27/03/2033,97.942.595-4,SSP,SP,182.036.945-51,29199761375,A,Augusto Cavalcanti,Agatha Duarte,Daniela Pinto
-Liz Ramos,D,29/10/1957,Mendonca do Sul,MT,20/03/2021,18/03/2031,95.318.906-1,DETRAN,RN,820.374.916-03,73637527986,D,Felipe Viana,Srta. Maria Alice Lopes,Liz Ramos
-Pedro Henrique Sales,B,09/12/1992,Goncalves,CE,10/09/2020,08/09/2030,35.775.217-3,SSP,PA,326.017.954-25,88217629806,B,Luiz Felipe da Cunha,Eloa Duarte,Pedro Henrique Sales
-Sr. Murilo da Conceicao,E,16/10/2001,Sousa Paulista,ES,02/05/2016,30/04/2026,14.900.552-9,PC,PB,957.284.136-09,03379782328,E,Calebe Pereira,Dra. Maria Eduarda Costa,Sr. Murilo da Conceicao
-Anthony Pires,D,20/06/2005,Rodrigues,TO,10/02/2024,07/02/2034,62.984.561-0,SSP,ES,063.712.849-40,43990815479,D,Caleb Cavalcanti,Maria Liz Pereira,Anthony Pires
-Lorenzo Porto,D,20/11/1955,Cassiano,AL,12/02/2020,09/02/2030,41.438.959-5,IPF,BA,751.963.428-00,37890655321,D,Benicio Cavalcanti,Ana Jesus,Lorenzo Porto
-Bella Vargas,D,13/11/1980,da Mata da Praia,PB,14/04/2016,12/04/2026,57.826.685-8,PC,RS,139.742.605-52,89364448817,D,Pedro Henrique Montenegro,Marcela Gomes,Bella Vargas
-Luisa da Luz,C,01/01/1957,Jesus Paulista,PR,11/09/2020,09/09/2030,43.949.799-3,IIRGD,AM,479.251.608-02,74036038874,C,Sr. Jose Cirino,Caroline Novaes,Luisa da Luz
-Fernanda Costa,C,11/06/2001,Garcia Grande,DF,05/10/2019,02/10/2029,69.682.975-4,DETRAN,SC,861.923.704-78,84616267065,C,Raul da Costa,Isis Cirino,Fernanda Costa
-Eduarda Alves,E,02/08/1968,da Mata Alegre,RN,18/01/2016,15/01/2026,60.820.334-0,IPF,SE,356.427.801-07,32233213833,E,Sr. Thales da Conceicao,Maria Luisa Pimenta,Eduarda Alves
-Dra. Brenda Nunes,B,20/05/1967,Oliveira,PR,29/02/2020,26/02/2030,11.890.584-8,PC,RR,091.853.726-68,04502236891,B,Marcelo Monteiro,Daniela da Mata,Dra. Brenda Nunes
-Aurora Mendes,E,30/03/1968,Alves da Prata,PB,26/11/2021,24/11/2031,36.704.413-7,IFP,SE,326.190.754-16,45701824181,E,Guilherme Pacheco,Alicia Novaes,Aurora Mendes
-Luan Pacheco,B,21/05/1966,Cavalcante do Sul,BA,18/07/2022,15/07/2032,54.585.241-1,DETRAN,SC,357.269.140-07,93165017378,B,Bernardo Marques,Laura Cardoso,Luan Pacheco
-Isis Jesus,D,11/02/1985,Lopes,RR,31/03/2022,28/03/2032,14.269.138-7,SSP,AL,689.374.201-04,35458017540,D,Dr. Kaique Fogaca,Dra. Ayla Pinto,Isis Jesus
-Aurora Correia,E,22/12/1949,Camargo do Sul,PB,16/01/2020,13/01/2030,81.354.409-5,DETRAN,AM,396.418.275-37,31680381307,E,Davi Lucas Santos,Srta. Mariah Moraes,Aurora Correia
+Srta. Liz da Conceicao,E,08/08/1975,das Neves,MT,23/12/2020,21/12/2030,48.247.674-0,IFP,RJ,261.057.834-26,65612691783,E,Vinicius Ferreira,Sra. Clara Marques,Srta. Liz da Conceicao
+Caio Nogueira,C,13/05/1967,Aparecida,SC,13/06/2016,11/06/2026,40.770.771-3,IIRGD,PE,602.385.149-51,24712566019,C,Breno Lopes,Luana Dias,Caio Nogueira
+Barbara Borges,E,19/02/1964,Pacheco,PA,11/06/2017,09/06/2027,23.769.190-1,IPF,MA,716.408.395-93,98438010452,E,Pedro Miguel Novaes,Dra. Leticia Campos,Barbara Borges
+Henrique da Luz,E,06/08/1973,da Conceicao de Goias,AL,15/04/2022,12/04/2032,50.838.947-0,IFP,AL,783.451.290-05,76468712635,E,Arthur Gabriel Barros,Ana Livia Barros,Henrique da Luz
+Sra. Zoe Cassiano,C,02/03/1965,Farias do Norte,CE,02/06/2016,31/05/2026,44.218.597-4,IFP,DF,817.620.953-86,70244797475,C,Vitor Casa Grande,Leticia Rios,Sra. Zoe Cassiano
+Natalia Duarte,D,15/11/1977,da Cruz,SC,18/11/2015,15/11/2025,54.792.993-0,SSP,AP,065.123.478-62,15473039946,D,Henry Gabriel da Mata,Sabrina Marques,Natalia Duarte
+Eloa Farias,D,11/04/1988,Aparecida do Campo,PB,06/01/2018,04/01/2028,35.592.622-5,IIRGD,AM,469.831.027-03,08904020710,D,Guilherme Cavalcanti,Ana Beatriz Ribeiro,Eloa Farias
+Marina Vieira,A,18/08/1970,da Luz Paulista,SE,26/07/2017,24/07/2027,93.783.877-7,IIRGD,BA,274.953.608-10,19166042367,A,Luiz Gustavo Martins,Alice Ramos,Marina Vieira
+Calebe Ferreira,C,19/01/1990,Silveira de Leao,RS,20/04/2022,17/04/2032,48.655.661-5,SSP,RO,302.479.815-32,04101023062,C,Jose Miguel Sousa,Ana Clara Aragao,Calebe Ferreira
+Cecilia Barros,D,03/12/1960,Castro dos Dourados,SP,21/05/2022,18/05/2032,19.820.620-5,DETRAN,AP,164.908.273-87,96918069150,D,Davi da Costa,Luisa Cavalcante,Cecilia Barros
+Luiz Felipe da Costa,E,18/12/1996,Vieira de Martins,AC,19/02/2022,17/02/2032,38.974.410-6,IPF,MG,038.215.467-35,17727431969,E,Bernardo Abreu,Brenda Novais,Luiz Felipe da Costa
+Davi Peixoto,E,15/11/1962,Rios,PR,13/07/2016,11/07/2026,64.691.716-7,DETRAN,TO,157.982.034-41,20477973329,E,Vitor Hugo Siqueira,Lunna Vargas,Davi Peixoto
+Maite Melo,E,23/07/1952,Cunha,MG,09/01/2022,07/01/2032,37.245.374-8,IFP,DF,638.705.924-00,30395699746,E,Ravi Lucca Viana,Barbara Farias,Maite Melo
+Srta. Manuela Garcia,B,12/10/1997,Garcia,CE,25/04/2018,22/04/2028,91.451.396-3,SSP,PE,648.035.791-48,44565484154,B,Pietro Moura,Ana Nogueira,Srta. Manuela Garcia
+Ryan Monteiro,D,05/12/1990,Souza Paulista,RR,15/02/2019,12/02/2029,39.943.299-1,IPF,PE,635.810.974-00,71696557182,D,Enrico das Neves,Dra. Maria Clara Fogaca,Ryan Monteiro
+Ana Rocha,C,26/05/1945,Vargas,RS,17/09/2018,14/09/2028,47.766.233-6,IFP,BA,314.205.687-44,53497671324,C,Benjamin Pires,Jade Novais,Ana Rocha
+Sra. Isabel Pimenta,C,17/01/2002,Peixoto da Mata,SC,05/08/2017,03/08/2027,25.806.884-3,SSP,PI,970.684.152-02,33651532600,C,Luiz Gustavo Novais,Juliana Montenegro,Sra. Isabel Pimenta
+Brayan Carvalho,E,10/06/1979,Marques Verde,RN,25/06/2018,22/06/2028,46.471.578-2,IPF,AP,896.320.451-06,47901476013,E,Pedro Lucas Novaes,Clarice Jesus,Brayan Carvalho
+Hadassa Moura,B,16/04/1949,Souza,AL,08/01/2021,06/01/2031,35.586.230-3,IIRGD,BA,648.235.971-09,88580991900,B,Joao Lucas Cavalcante,Maite Barros,Hadassa Moura
+Julia da Cruz,C,10/04/1980,Montenegro Grande,AP,02/09/2019,30/08/2029,56.923.909-3,SSP,AL,842.130.576-07,21275838355,C,Sr. Benicio Vieira,Srta. Fernanda Azevedo,Julia da Cruz
+Guilherme Cunha,D,29/08/1970,Almeida,PE,22/04/2024,20/04/2034,42.109.185-4,PC,AM,728.365.904-83,18385316922,D,Enrico da Mata,Lara Novais,Guilherme Cunha
+Jose Miguel Rodrigues,A,22/08/2004,Novaes de Goias,ES,19/05/2016,17/05/2026,28.994.262-6,IPF,AC,561.497.032-07,98739859907,A,Jose Miguel da Conceicao,Sra. Heloisa da Costa,Jose Miguel Rodrigues
+Liz Aparecida,B,19/05/1951,Mendes,SE,06/05/2024,04/05/2034,26.819.819-8,IIRGD,MA,237.481.690-78,66861973833,B,Sr. Luiz Felipe Vargas,Maysa Pimenta,Liz Aparecida
+Melina Lima,A,18/09/1954,Oliveira Verde,AM,10/11/2016,08/11/2026,11.733.136-8,IIRGD,AM,098.374.652-47,70628548254,A,Dr. Francisco Castro,Maite Goncalves,Melina Lima
+Milena Casa Grande,C,30/05/1953,Melo Alegre,MA,28/09/2021,26/09/2031,67.809.978-1,IIRGD,GO,836.207.415-90,39536806342,C,Benjamim Araujo,Dra. Luara Sampaio,Milena Casa Grande
+Luiz Gustavo Ramos,C,17/02/1969,Casa Grande,BA,02/06/2020,31/05/2030,41.369.193-2,DETRAN,MT,217.358.460-07,51297916602,C,Dr. Diogo Camara,Fernanda Andrade,Luiz Gustavo Ramos
+Carolina Borges,E,24/01/1981,Rocha da Prata,AC,03/08/2020,01/08/2030,53.780.937-6,IIRGD,AC,082.459.136-42,10205686319,E,Lucas Cirino,Larissa Vasconcelos,Carolina Borges
+Vitoria Vasconcelos,C,04/09/1993,Alves dos Dourados,MS,03/11/2018,31/10/2028,15.378.226-7,IPF,MT,958.273.401-97,42884534726,C,Nicolas Casa Grande,Stephany da Rosa,Vitoria Vasconcelos
+Mariane Dias,E,07/04/1961,da Rosa,PI,24/10/2016,22/10/2026,50.874.339-3,SSP,RN,783.690.542-00,50504531215,E,Dr. Joao Miguel Guerra,Natalia Nunes,Mariane Dias
+Alicia Araujo,A,25/01/1992,Cardoso do Oeste,PR,31/12/2016,29/12/2026,40.212.851-3,SSP,MA,978.253.061-12,76463670141,A,Luiz Otavio Borges,Luiza da Paz,Alicia Araujo
+Joao Gabriel Barros,E,24/03/1953,Brito Verde,MT,17/05/2021,15/05/2031,64.260.897-2,SSP,AC,672.915.804-20,79898848923,E,Mateus da Luz,Natalia Fernandes,Joao Gabriel Barros
+Gabriel Rezende,C,28/12/1957,Sales da Mata,AM,10/04/2016,08/04/2026,25.937.361-9,IFP,MA,704.921.653-43,34405372885,C,Brayan Costa,Dra. Ana Luiza Cardoso,Gabriel Rezende
+Enrico Novaes,A,14/08/1992,da Conceicao,SC,06/02/2021,04/02/2031,20.365.830-4,DETRAN,MG,956.240.813-24,99826939461,A,Dr. Calebe Rodrigues,Sra. Ester Garcia,Enrico Novaes
+Nicolas Ferreira,D,25/05/1947,Vieira,RS,30/11/2023,27/11/2033,66.435.603-7,IPF,PR,416.839.205-89,34524686969,D,Eduardo Teixeira,Larissa Cardoso,Nicolas Ferreira
+Levi Novais,C,06/05/1991,Freitas,AM,12/12/2015,09/12/2025,61.227.132-7,IPF,PB,203.487.659-83,65738764511,C,Caue Costa,Sra. Joana Rodrigues,Levi Novais
+Maria Luiza da Mota,E,03/10/1946,Montenegro,MT,06/08/2016,04/08/2026,14.402.165-8,SSP,GO,742.109.563-25,57288477839,E,Vicente da Paz,Nicole Lima,Maria Luiza da Mota
+Agatha da Mata,C,27/02/1958,Farias,MT,04/08/2017,02/08/2027,21.892.833-8,PC,ES,498.731.052-04,05856172970,C,Dr. Bernardo Lopes,Giovanna Correia,Agatha da Mata
+Sr. Diogo Albuquerque,D,30/03/1992,Nogueira Verde,MT,07/02/2019,04/02/2029,67.517.764-6,SSP,PR,540.912.678-58,67444198818,D,Leo Pastor,Cecilia Albuquerque,Sr. Diogo Albuquerque
+Thales da Rocha,E,03/04/2007,Carvalho,SP,04/12/2023,01/12/2033,53.655.133-9,IFP,SE,275.304.819-32,28076190800,E,Joaquim Araujo,Joana Cardoso,Thales da Rocha
+Luigi da Cunha,E,23/11/1997,da Luz da Mata,MS,07/02/2020,04/02/2030,19.233.127-2,IFP,DF,386.190.574-48,53728967510,E,Dr. Pedro Miguel Lopes,Bella Macedo,Luigi da Cunha
+Natalia Santos,C,10/11/1971,Vieira,RR,25/08/2016,23/08/2026,86.446.820-7,IIRGD,PA,910.273.568-77,95320686369,C,Diego Freitas,Esther Azevedo,Natalia Santos
+Maria Julia da Conceicao,B,20/03/2000,Rodrigues de Goias,AL,07/04/2016,05/04/2026,37.588.218-3,SSP,BA,891.750.642-94,50680246000,B,Vicente Caldeira,Maria Eduarda Sa,Maria Julia da Conceicao
+Davi Lucas das Neves,A,11/01/1994,Pastor do Oeste,AP,13/08/2024,11/08/2034,50.808.740-4,IIRGD,AC,291.805.634-06,19047685433,A,Sr. Rhavi da Cruz,Luna Moraes,Davi Lucas das Neves
+Theo Rodrigues,C,22/06/1959,Cunha,PR,01/07/2021,29/06/2031,90.502.599-6,SSP,PA,564.023.718-07,81614984188,C,Ravi da Cruz,Maria Luisa Cavalcante,Theo Rodrigues
+Augusto Rezende,E,16/09/1972,Barros,RN,28/09/2021,26/09/2031,70.662.666-1,IPF,BA,576.043.289-38,00473926625,E,Isaque Pacheco,Eloah da Cunha,Augusto Rezende
+Bella Brito,B,29/05/1984,Lopes,MA,18/10/2022,15/10/2032,68.401.573-4,IFP,MT,742.639.185-09,80708974830,B,Paulo Siqueira,Maria Luisa Freitas,Bella Brito
+Maite Macedo,C,02/12/1990,Andrade do Oeste,ES,02/07/2022,29/06/2032,96.876.565-3,IIRGD,SC,790.418.265-30,75276470555,C,Yan Ribeiro,Julia Moura,Maite Macedo
+Juan Sampaio,A,03/04/1946,Costa,SE,28/07/2020,26/07/2030,53.984.904-8,PC,MA,052.984.137-14,72879859025,A,Dr. Vinicius Nogueira,Vitoria Vargas,Juan Sampaio
+Dom Jesus,C,05/04/1948,Nascimento,SE,06/03/2018,03/03/2028,21.936.369-3,PC,MS,021.983.475-04,91653649462,C,Jose Fernandes,Raquel Vieira,Dom Jesus
+Davi Luiz Sa,B,05/12/1978,Mendes,CE,04/09/2022,01/09/2032,25.720.982-4,SSP,AM,652.390.187-40,79452537994,B,Lucas Gabriel Camara,Valentina Aparecida,Davi Luiz Sa
+Mathias Leao,D,21/11/1978,Martins,AM,20/09/2020,18/09/2030,93.292.786-4,PC,CE,423.065.789-74,08445421407,D,Dr. Daniel Sousa,Elisa Montenegro,Mathias Leao
+Dr. Thomas da Mota,E,06/08/1960,Casa Grande do Galho,BA,14/01/2024,11/01/2034,79.972.641-9,SSP,PE,381.974.260-31,27809052505,E,Joao Lucas Novaes,Srta. Camila Brito,Dr. Thomas da Mota
+Hellena Barros,D,22/01/2000,Aparecida do Oeste,RJ,04/12/2018,01/12/2028,89.513.911-4,IIRGD,AC,893.267.150-86,38530044643,D,Juan da Conceicao,Anna Liz Melo,Hellena Barros
+Asafe da Paz,B,26/04/1985,Ramos,MG,01/06/2023,29/05/2033,73.395.631-4,IPF,PI,587.462.391-46,84628327697,B,Murilo da Mota,Agatha Pimenta,Asafe da Paz
+Joao Vitor Guerra,C,21/04/1993,Rodrigues da Mata,AM,11/11/2024,09/11/2034,33.894.811-4,IFP,PB,312.456.789-73,40260894596,C,Dom Moraes,Ana Julia Camargo,Joao Vitor Guerra
+Eloah Cunha,B,10/02/1986,da Rosa,RJ,23/11/2015,20/11/2025,88.642.226-0,SSP,PI,734.085.921-79,78121047251,B,Vinicius Jesus,Maria Flor Nogueira,Eloah Cunha
+Maria Alice da Conceicao,E,03/09/1977,Sousa da Serra,TO,06/06/2021,04/06/2031,59.187.896-2,IFP,DF,536.290.418-33,62158223236,E,Vitor Hugo Moraes,Sra. Mirella Vargas,Maria Alice da Conceicao
+Oliver Campos,A,06/04/1965,Nascimento,RN,18/08/2022,15/08/2032,13.393.665-8,IPF,RN,713.492.058-50,01736686022,A,Theo Sa,Caroline da Paz,Oliver Campos
+Dr. Carlos Eduardo Abreu,D,16/01/1993,Ribeiro,PB,08/03/2018,05/03/2028,28.465.226-1,PC,RN,705.691.324-52,63742108736,D,Sr. Renan Vasconcelos,Milena Carvalho,Dr. Carlos Eduardo Abreu
+Leonardo Peixoto,B,29/07/1949,Alves,AP,11/01/2021,09/01/2031,17.454.445-7,SSP,RS,345.187.926-37,16665835109,B,Mathias Carvalho,Marcela Farias,Leonardo Peixoto
+Davi Luiz Vasconcelos,C,28/03/1996,Borges,RO,29/01/2021,27/01/2031,10.464.642-1,SSP,RJ,236.049.185-70,12020871638,C,Murilo Cirino,Larissa Barros,Davi Luiz Vasconcelos
+Maria Laura Cavalcante,E,01/08/1954,Carvalho,SC,29/03/2016,27/03/2026,28.934.890-6,DETRAN,MT,467.130.859-20,78015665961,E,Benjamin Rocha,Manuella Fogaca,Maria Laura Cavalcante
+Mirella Rodrigues,D,24/02/1969,Goncalves,DF,14/08/2021,12/08/2031,29.586.619-3,IFP,RJ,057.148.962-11,12429974301,D,Gustavo Henrique Sampaio,Caroline Nogueira,Mirella Rodrigues
+Joana Garcia,A,24/04/1948,Sa dos Dourados,RS,31/01/2021,29/01/2031,52.437.182-9,IPF,RO,712.958.046-11,26372937627,A,Murilo Campos,Dra. Olivia da Luz,Joana Garcia
+Sr. Davi Abreu,A,26/06/2003,da Conceicao,SC,08/01/2021,06/01/2031,52.574.371-3,IFP,SC,918.405.726-20,49598195829,A,Yuri Pacheco,Evelyn Rodrigues,Sr. Davi Abreu
+Maria Julia Melo,B,25/05/1996,Nunes de Sales,PB,13/03/2017,11/03/2027,11.256.705-8,PC,CE,346.728.590-29,78987238338,B,Davi Miguel Goncalves,Eduarda Abreu,Maria Julia Melo
+Dra. Ana Laura Moraes,D,16/11/1991,Pinto,BA,25/02/2020,22/02/2030,93.590.135-4,IPF,SC,916.243.708-96,60056550235,D,Luiz Otavio Fernandes,Maria Helena Pacheco,Dra. Ana Laura Moraes
+Heloisa Siqueira,E,02/08/2007,Pereira,MG,19/11/2018,16/11/2028,56.175.420-5,SSP,CE,734.056.812-35,42458713375,E,Caua Correia,Isabella Moreira,Heloisa Siqueira
+Leandro Viana,C,22/06/1953,Campos,AP,26/12/2015,23/12/2025,40.212.296-9,IPF,PA,869.173.425-64,78714814464,C,Igor Montenegro,Srta. Carolina Ramos,Leandro Viana
+Davi Vieira,C,23/05/1962,Fonseca da Mata,RO,23/02/2018,21/02/2028,46.853.224-5,IIRGD,BA,053.492.167-16,71448083603,C,Dr. Lucca Cunha,Heloisa Marques,Davi Vieira
+Sra. Mariane Rios,B,24/02/1957,da Cunha,RN,30/03/2021,28/03/2031,34.273.801-1,IPF,TO,687.293.504-92,38929035243,B,Daniel Borges,Maysa Araujo,Sra. Mariane Rios
+Milena Vieira,E,23/08/1962,Sales Alegre,RJ,04/03/2021,02/03/2031,60.590.771-2,DETRAN,PA,357.648.109-57,60585489683,E,Eduardo Castro,Lais Fogaca,Milena Vieira
+Dr. Yuri Cardoso,B,08/09/1978,Rocha Alegre,SC,11/09/2020,09/09/2030,44.586.688-0,IPF,MT,358.261.794-73,48772783579,B,Andre Vieira,Bruna Gomes,Dr. Yuri Cardoso
+Srta. Alana Leao,D,13/08/2004,Cassiano do Norte,PA,26/02/2022,24/02/2032,88.307.966-8,DETRAN,SC,215.374.968-91,65794552953,D,Francisco Santos,Sra. Emanuelly Barbosa,Srta. Alana Leao
+Eloa Sa,D,31/08/1969,Sa,AM,20/08/2019,17/08/2029,77.254.751-3,IIRGD,SP,036.921.875-21,83226394326,D,Kaique Nogueira,Cecilia Caldeira,Eloa Sa
+Maria Helena Cirino,A,24/12/1962,da Luz,TO,16/02/2020,13/02/2030,13.480.758-8,DETRAN,PE,156.937.084-20,57915901534,A,Pietro Rios,Dra. Melina Novaes,Maria Helena Cirino
+Calebe Almeida,C,20/09/1949,Camargo,PE,12/11/2023,09/11/2033,46.226.377-3,PC,AL,367.108.425-17,34139304879,C,Mathias Lima,Maria Eduarda Macedo,Calebe Almeida
+Danilo Aparecida,B,22/01/1968,Rodrigues,SC,11/10/2020,09/10/2030,96.179.957-6,PC,MS,605.418.392-33,75061153339,B,Yan das Neves,Ana Vitoria Rios,Danilo Aparecida
+Joao Gabriel Martins,E,19/03/1991,da Rosa,RN,29/11/2020,27/11/2030,26.769.105-5,PC,PA,463.571.098-00,46616584785,E,Vitor Hugo da Costa,Heloisa Correia,Joao Gabriel Martins
+Ayla Cardoso,E,20/12/1978,Almeida,SC,26/02/2023,23/02/2033,15.938.250-0,PC,AM,835.602.941-42,18047502614,E,Daniel Nascimento,Srta. Maria Helena Garcia,Ayla Cardoso
+Julia Guerra,C,20/04/1953,Barbosa,MT,22/11/2016,20/11/2026,97.731.119-1,SSP,BA,189.047.632-31,22223117885,C,Sr. Henrique Duarte,Maria Sophia Gomes,Julia Guerra
+Maite Fonseca,B,02/01/1953,Nascimento Verde,AC,23/09/2020,21/09/2030,68.505.602-5,PC,PE,403.198.762-50,74840820519,B,Jose da Mata,Antonella Novais,Maite Fonseca
+Caleb da Costa,A,26/05/2005,Santos,AC,21/01/2022,19/01/2032,21.432.363-1,DETRAN,BA,580.716.234-07,02625238009,A,Theo Mendes,Barbara Sa,Caleb da Costa
+Luiza Fernandes,B,27/01/1998,Rocha de Silva,AP,30/04/2019,27/04/2029,15.682.589-0,IFP,PI,257.031.469-25,67966519385,B,Isaac Nunes,Lavinia Fonseca,Luiza Fernandes
+Enzo Gabriel Fonseca,B,27/03/1966,Machado,PR,03/04/2020,01/04/2030,47.414.395-9,IFP,PB,367.128.049-22,50951974968,B,Benjamim Sales,Livia Fonseca,Enzo Gabriel Fonseca
+Rebeca Ribeiro,D,21/12/1951,Duarte,DF,08/03/2020,06/03/2030,33.972.733-6,IPF,RJ,597.026.148-30,94115731866,D,Lucca Fogaca,Sra. Aurora Rios,Rebeca Ribeiro
+Sr. Leandro da Rosa,A,04/03/1968,Abreu,AL,07/10/2018,04/10/2028,52.277.284-3,PC,PA,319.802.746-22,94844532886,A,Ravi Lucca Fernandes,Ayla Oliveira,Sr. Leandro da Rosa
+Clarice Casa Grande,B,13/12/1976,Lopes de Ramos,AP,05/12/2019,02/12/2029,49.965.431-8,IIRGD,DF,920.358.417-04,73751779154,B,Ravi Lucca Andrade,Brenda Montenegro,Clarice Casa Grande
+Srta. Sabrina Costa,E,03/11/1979,Costa de Goias,CE,19/02/2018,17/02/2028,64.725.627-3,PC,PB,729.615.430-61,77091362076,E,Dr. Andre Farias,Melissa Costela,Srta. Sabrina Costa
+Evelyn Camargo,C,07/05/1988,Rodrigues de Brito,PA,27/10/2018,24/10/2028,20.488.465-3,SSP,PA,067.948.321-78,44942180785,C,Otto Cirino,Camila Andrade,Evelyn Camargo
+Maria Alice Duarte,B,22/02/1964,Carvalho Verde,BA,10/02/2021,08/02/2031,52.851.211-4,PC,AC,931.208.476-31,99248558895,B,Caue Pinto,Antonella Alves,Maria Alice Duarte
+Mariah Rocha,C,23/02/1990,Farias de Fernandes,PE,21/10/2024,19/10/2034,37.139.116-8,IIRGD,PA,401.952.678-85,32981501673,C,Diogo Ribeiro,Lara Albuquerque,Mariah Rocha
+Sophia Araujo,E,01/05/1998,Cirino,RN,24/03/2017,22/03/2027,85.421.957-3,PC,RR,821.975.430-32,84794580641,E,Noah Sales,Sra. Natalia Farias,Sophia Araujo
+Valentina Nascimento,D,10/04/1953,Siqueira,CE,08/06/2018,05/06/2028,68.863.179-6,SSP,RJ,468.025.397-56,91823012405,D,Benicio Alves,Pietra Martins,Valentina Nascimento
+Joao Vitor Teixeira,A,20/12/1986,Dias do Norte,SP,14/09/2020,12/09/2030,16.125.332-0,IPF,SP,092.756.318-59,08694769422,A,Valentim Brito,Brenda Vieira,Joao Vitor Teixeira
+Valentina Pacheco,B,10/08/1973,Dias do Campo,AM,05/08/2021,03/08/2031,82.544.225-7,IFP,PA,564.120.837-07,20705773346,B,Emanuel Machado,Livia Alves,Valentina Pacheco
+Davi Luiz Peixoto,D,20/04/1953,Siqueira de Ferreira,AM,22/01/2018,20/01/2028,74.446.615-8,DETRAN,GO,816.029.534-06,22147197850,D,Kevin Cardoso,Clara da Rocha,Davi Luiz Peixoto
+Benjamim Sales,E,01/01/1968,Pires,PR,07/10/2023,04/10/2033,99.992.713-9,SSP,ES,458.203.179-04,15092806315,E,Dr. Joao Miguel Rios,Evelyn Casa Grande,Benjamim Sales
+Srta. Aylla Pinto,E,10/03/2001,Silva do Sul,AM,01/06/2017,30/05/2027,74.820.259-5,PC,PA,435.061.827-90,42702752111,E,Mateus Sousa,Lara Brito,Srta. Aylla Pinto
+Ian Leao,C,23/12/1990,da Mata,MS,27/05/2020,25/05/2030,36.676.405-5,SSP,PA,578.130.962-40,54822965336,C,Arthur Gabriel Alves,Helena da Rocha,Ian Leao
