@@ -106,11 +106,11 @@ def adicionar_assinatura(imagem, assinatura_valor, posicao=(600, 1400), tamanho=
         # Se não é caminho válido: desenhar texto como assinatura sintética
         texto = str(assinatura_valor) if assinatura_valor is not None else "Assinatura Fictícia"
         # tenta fonte "script" para assemelhar caligrafia
-        font = cv2.FONT_HERSHEY_SCRIPT_COMPLEX
+        font = cv2.FONT_HERSHEY_SCRIPT_SIMPLEX
         # estima tamanho da fonte para caber na largura desejada
         # encontra maior fontScale que caiba na largura max_w
-        font_scale = 1.0
-        thickness = 2
+        font_scale = 0.8
+        thickness = 1
         (tw, th), _ = cv2.getTextSize(texto, font, font_scale, thickness)
         # ajusta scale baseado em largura e altura
         if tw > 0:
@@ -131,7 +131,7 @@ def adicionar_assinatura(imagem, assinatura_valor, posicao=(600, 1400), tamanho=
         if x + tw > imagem.shape[1]:
             x = imagem.shape[1] - tw - 5
         # desenha com leve sombra para realismo
-        cv2.putText(imagem, texto, (x+1, y+1+th), font, font_scale, (150,150,150), thickness+1, cv2.LINE_AA)
+        cv2.putText(imagem, texto, (x+1, y+1+th), font, font_scale, (180,180,180), thickness, cv2.LINE_AA)
         cv2.putText(imagem, texto, (x, y+th), font, font_scale, (0,0,0), thickness, cv2.LINE_AA)
         return imagem
 
@@ -254,7 +254,7 @@ def gerar_imagens(quantidade_imagens, imagem_base, csv_arquivo,
         else:
             pos_ass = (600, 1400)
 
-        tamanho_assin = (200, 100)  # ajuste se precisar
+        tamanho_assin = (180, 80)  # ajuste se precisar
         print(f"Adicionando assinatura (valor: {assinatura_valor}) em {pos_ass}")
         imagem = adicionar_assinatura(imagem, assinatura_valor, posicao=pos_ass, tamanho=tamanho_assin, alpha=0.9)
 
