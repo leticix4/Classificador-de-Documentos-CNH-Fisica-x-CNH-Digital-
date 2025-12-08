@@ -31,13 +31,13 @@ aumentacoes_quase_original = A.Compose([
 arquivos = [f for f in os.listdir(pasta_entrada) if f.endswith(('.jpg', '.jpeg', '.png'))]
 
 if not arquivos:
-    print(f"⚠️ Nenhuma imagem encontrada em '{pasta_entrada}'!")
+    print(f"Nenhuma imagem encontrada em '{pasta_entrada}'!")
     exit()
 
 num_variacoes = 5
 
-print(f"📁 Encontradas {len(arquivos)} imagens em '{pasta_entrada}'")
-print(f"🔄 Gerando {num_variacoes} variações LEGÍVEIS...\n")
+print(f" Encontradas {len(arquivos)} imagens em '{pasta_entrada}'")
+print(f"Gerando {num_variacoes} variações LEGÍVEIS...\n")
 
 for arquivo in arquivos:
     caminho_arquivo = os.path.join(pasta_entrada, arquivo)

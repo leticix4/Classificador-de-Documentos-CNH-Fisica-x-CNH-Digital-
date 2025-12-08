@@ -6,9 +6,6 @@ import unicodedata
 from datetime import datetime, timedelta
 
 def remover_acentos(texto: str) -> str:
-    """
-    Remove acentos e cedilhas de qualquer string.
-    """
     if not isinstance(texto, str):
         return texto
     return ''.join(

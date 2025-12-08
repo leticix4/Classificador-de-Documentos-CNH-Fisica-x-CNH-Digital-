@@ -40,23 +40,11 @@ def adicionar_biometria_foto(imagem, caminho_face, posicao=(500, 1000), tamanho=
 
 
 def adicionar_assinatura(imagem, assinatura_valor, posicao=(600, 1400), tamanho=(350, 120), alpha=0.9):
-    """
-    Insere assinatura digital na imagem.
-    - assinatura_valor: pode ser
-        * caminho para arquivo de imagem (PNG/JPG) -> será sobreposto com blend (respeita alpha de PNG)
-        * texto -> será desenhado como assinatura sintética usando fonte script do OpenCV
-    - posicao: (x, y) do canto superior esquerdo onde a assinatura será colocada
-    - tamanho: (largura, altura) desejada para a assinatura (para imagens)
-    - alpha: opacidade (0.0 a 1.0) para blending (quando for imagem sem alpha)
-    Retorna a imagem alterada.
-    """
     try:
         x, y = posicao
         max_w, max_h = tamanho
-
-        # Se valor é caminho válido pra imagem
         if isinstance(assinatura_valor, str) and os.path.exists(assinatura_valor):
-            sig = cv2.imread(assinatura_valor, cv2.IMREAD_UNCHANGED)  # mantém canal alpha se houver
+            sig = cv2.imread(assinatura_valor, cv2.IMREAD_UNCHANGED)  
             if sig is None:
                 print(f"AVISO: assinatura em '{assinatura_valor}' não pôde ser lida. Usando texto.")
             else:
@@ -69,14 +57,10 @@ def adicionar_assinatura(imagem, assinatura_valor, posicao=(600, 1400), tamanho=
                 new_h = int(sig_h * scale)
                 sig_resized = cv2.resize(sig, (new_w, new_h), interpolation=cv2.INTER_AREA)
 
-                # verifica espaço
                 if y + new_h > imagem.shape[0] or x + new_w > imagem.shape[1]:
                     print("AVISO: assinatura (imagem) não cabe na posição especificada — ajustando posição para caber.")
-                    # ajusta para caber na borda direita/baixa
                     x = min(x, imagem.shape[1] - new_w)
                     y = min(y, imagem.shape[0] - new_h)
-
-                # Se imagem tem alpha (4 canais) -> uso alpha para blending
                 if sig_resized.shape[2] == 4:
                     alpha_channel = sig_resized[:, :, 3] / 255.0
                     rgb_sig = sig_resized[:, :, :3]
@@ -85,14 +69,12 @@ def adicionar_assinatura(imagem, assinatura_valor, posicao=(600, 1400), tamanho=
                     roi = imagem[y:y+h, x:x+w].astype(float)
                     fg = rgb_sig.astype(float)
 
-                    # blend por pixel
                     for c in range(3):
                         roi[:, :, c] = (alpha_channel * fg[:, :, c] + (1 - alpha_channel) * roi[:, :, c])
 
                     imagem[y:y+h, x:x+w] = roi.astype('uint8')
                     return imagem
                 else:
-                    # sem alpha -> aplicar blend com alpha uniform
                     h, w = sig_resized.shape[:2]
                     if y + h > imagem.shape[0] or x + w > imagem.shape[1]:
                         print("AVISO: assinatura (imagem sem alpha) não cabe completamente — pulando.")
@@ -103,9 +85,7 @@ def adicionar_assinatura(imagem, assinatura_valor, posicao=(600, 1400), tamanho=
                     imagem[y:y+h, x:x+w] = blended.astype('uint8')
                     return imagem
 
-        # Se não é caminho válido: desenhar texto como assinatura sintética
         texto = str(assinatura_valor) if assinatura_valor is not None else "Assinatura Fictícia"
-        # tenta fonte "script" para assemelhar caligrafia
         font = cv2.FONT_HERSHEY_SCRIPT_COMPLEX
         # estima tamanho da fonte para caber na largura desejada
         # encontra maior fontScale que caiba na largura max_w
