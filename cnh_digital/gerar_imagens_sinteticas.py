@@ -8,18 +8,16 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_dir)  
 
 quantidade_imagens = 10
-imagem_base = 'cnh_img_base.jpeg'
+imagem_base = 'cnh_img_base_digital.png'
 csv_arquivo = 'dados_fakes.csv'
-json_arquivo = 'posicoes.json'
+json_arquivo = 'posicoes_digital.json'
 pasta_saida = 'imagens_geradas'
 pasta_faces = '../imagens_faces'
-pasta_assinaturas = 'assinaturas'  # pasta opcional com imagens de assinatura (PNG com alpha recomendado)
+pasta_assinaturas = 'assinaturas'
 
 
 def adicionar_biometria_foto(imagem, caminho_face, posicao=(500, 1000), tamanho=(900, 900)):
-    """
-    Adiciona foto da face na CNH
-    """
+
     try:
         face = cv2.imread(caminho_face)
         if face is None:
@@ -48,7 +46,6 @@ def adicionar_assinatura(imagem, assinatura_valor, posicao=(600, 1400), tamanho=
             if sig is None:
                 print(f"AVISO: assinatura em '{assinatura_valor}' não pôde ser lida. Usando texto.")
             else:
-                # redimensionar mantendo canais
                 sig_h, sig_w = sig.shape[:2]
                 scale_w = max_w / sig_w
                 scale_h = max_h / sig_h
@@ -104,13 +101,11 @@ def adicionar_assinatura(imagem, assinatura_valor, posicao=(600, 1400), tamanho=
         font_scale = min(scale_w, scale_h, 2.5)
         thickness = max(1, int(font_scale * 2))
 
-        # verifica se cabe; se não couber, move para dentro da imagem
         (tw, th), _ = cv2.getTextSize(texto, font, font_scale, thickness)
         if y + th > imagem.shape[0]:
             y = imagem.shape[0] - th - 5
         if x + tw > imagem.shape[1]:
             x = imagem.shape[1] - tw - 5
-        # desenha com leve sombra para realismo
         cv2.putText(imagem, texto, (x+1, y+1+th), font, font_scale, (150,150,150), thickness+1, cv2.LINE_AA)
         cv2.putText(imagem, texto, (x, y+th), font, font_scale, (0,0,0), thickness, cv2.LINE_AA)
         return imagem
@@ -123,7 +118,7 @@ def adicionar_assinatura(imagem, assinatura_valor, posicao=(600, 1400), tamanho=
 
 def gerar_imagens(quantidade_imagens, imagem_base, csv_arquivo,
                   json_arquivo, pasta_saida):
-    tamanho_fonte = 0.5
+    tamanho_fonte = 0.38
     espessura = 1
     cor_fonte = (0, 0, 0)
     fonte = cv2.FONT_HERSHEY_DUPLEX
@@ -202,11 +197,10 @@ def gerar_imagens(quantidade_imagens, imagem_base, csv_arquivo,
         idx_face = (id_item - 1) % len(imagens_faces)
         caminho_face = imagens_faces[idx_face]
         print(f"Adicionando foto: {os.path.basename(caminho_face)}")
-        posicao_foto = (215, 295)  
-        tamanho_foto = (290, 380)  
+        posicao_foto = (155, 236)  
+        tamanho_foto = (175, 240)  
         imagem = adicionar_biometria_foto(imagem, caminho_face, posicao_foto, tamanho_foto)
 
-        # Prioridade para um caminho especificado no CSV (campo 'assinatura'):
         assinatura_valor = None
         if 'assinatura' in dado and dado['assinatura'].strip():
             possivel = dado['assinatura'].strip()
@@ -234,7 +228,7 @@ def gerar_imagens(quantidade_imagens, imagem_base, csv_arquivo,
         else:
             pos_ass = (600, 1400)
 
-        tamanho_assin = (200, 100)  # ajuste se precisar
+        tamanho_assin = (100, 50)  # ajuste se precisar
         print(f"Adicionando assinatura (valor: {assinatura_valor}) em {pos_ass}")
         imagem = adicionar_assinatura(imagem, assinatura_valor, posicao=pos_ass, tamanho=tamanho_assin, alpha=0.9)
 
