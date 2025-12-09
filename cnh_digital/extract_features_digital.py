@@ -7,7 +7,7 @@ import csv
 import easyocr
 from pathlib import Path
 
-reader = easyocr.Reader(['pt'])  # carrega OCR em português
+reader = easyocr.Reader(['pt'], gpu=False)  # carrega OCR em português
 
 def carregar_imagens(pasta_imagens):
     caminhos = []
@@ -129,6 +129,15 @@ def main():
         return
 
     resultados = [processar_imagem(c, face_cascade) for c in caminhos_imagens]
+    
+    # teste
+    for caminho in caminhos_imagens:
+        print(f"\nProcessando: {os.path.basename(caminho)}")
+        info_basica = processar_imagem(caminho, face_cascade)
+        features_visuais = extrair_features(caminho)
+        info_completo = {**info_basica, **features_visuais}
+
+        resultados.append(info_completo)
 
     df = pd.DataFrame(resultados)
 
