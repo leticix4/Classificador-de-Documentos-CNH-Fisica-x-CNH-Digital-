@@ -7,8 +7,8 @@ import glob
 script_dir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_dir)  
 
-quantidade_imagens = 50
-imagem_base = 'CNHFisica.jpg'
+quantidade_imagens = 1000
+imagem_base = 'CNH_fisica_completa.jpg'
 csv_arquivo = 'dados_fakes.csv'
 json_arquivo = 'posicoes.json'
 pasta_saida = 'imagens_geradas'
@@ -16,7 +16,7 @@ pasta_faces = '../imagens_faces'
 pasta_assinaturas = 'assinaturas'  # pasta opcional com imagens de assinatura (PNG com alpha recomendado)
 
 
-def adicionar_biometria_foto(imagem, caminho_face, posicao=(395, 552), tamanho=(900, 900)):
+def adicionar_biometria_foto(imagem, caminho_face, posicao=(120, 210), tamanho=(900, 900)):
     """
     Adiciona foto da face na CNH
     """
@@ -109,7 +109,7 @@ def adicionar_assinatura(imagem, assinatura_valor, posicao=(600, 1400), tamanho=
         font = cv2.FONT_HERSHEY_SCRIPT_SIMPLEX
         # estima tamanho da fonte para caber na largura desejada
         # encontra maior fontScale que caiba na largura max_w
-        font_scale = 0.8
+        font_scale = 1.8
         thickness = 1
         (tw, th), _ = cv2.getTextSize(texto, font, font_scale, thickness)
         # ajusta scale baseado em largura e altura
@@ -143,7 +143,7 @@ def adicionar_assinatura(imagem, assinatura_valor, posicao=(600, 1400), tamanho=
 
 def gerar_imagens(quantidade_imagens, imagem_base, csv_arquivo,
                   json_arquivo, pasta_saida):
-    tamanho_fonte = 0.5
+    tamanho_fonte = 0.30
     espessura = 1
     cor_fonte = (0, 0, 0)
     fonte = cv2.FONT_HERSHEY_DUPLEX
@@ -222,8 +222,8 @@ def gerar_imagens(quantidade_imagens, imagem_base, csv_arquivo,
         idx_face = (id_item - 1) % len(imagens_faces)
         caminho_face = imagens_faces[idx_face]
         print(f"Adicionando foto: {os.path.basename(caminho_face)}")
-        posicao_foto = (215+40, 295+82)  
-        tamanho_foto = (290, 380)  
+        posicao_foto = (90, 143)  
+        tamanho_foto = (115, 142)  
         imagem = adicionar_biometria_foto(imagem, caminho_face, posicao_foto, tamanho_foto)
 
         # Prioridade para um caminho especificado no CSV (campo 'assinatura'):
