@@ -3,25 +3,37 @@ import os
 import numpy as np
 import pandas as pd
 import colorgram
-import csv
 import easyocr
 from pathlib import Path
 
-reader = easyocr.Reader(['pt'], gpu=False)  # carrega OCR em português
+reader = easyocr.Reader(['pt'], gpu=False)
+
 
 def carregar_imagens(pasta_imagens):
     caminhos = []
     for arquivo in os.listdir(pasta_imagens):
-        print(f"Lendo imagem {arquivo}")
-        caminho = os.path.join(pasta_imagens, arquivo)
-        if cv2.imread(caminho) is not None:
-            caminhos.append(caminho)
-        else:
-            print(f"Arquivo {arquivo} não é uma imagem válida, pulando")
+        if arquivo.lower().endswith(('.png', '.jpg', '.jpeg')):
+            caminho = os.path.join(pasta_imagens, arquivo)
+            print(f"Lendo imagem {arquivo}")
+            
+            try:
+                with open(caminho, 'rb') as f:
+                    file_bytes = np.frombuffer(f.read(), dtype=np.uint8)
+                    img = cv2.imdecode(file_bytes, cv2.IMREAD_COLOR)
+                
+                if img is not None:
+                    caminhos.append(caminho)
+                    print(f"  ✓ Carregada")
+                else:
+                    print(f"  ✗ Falha ao decodificar")
+            except Exception as e:
+                print(f"  ✗ Erro: {e}")
+    
     return caminhos
 
 
 def detectar_rosto(img, face_cascade):
+    """Detecta rosto na imagem"""
     img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(img_gray, scaleFactor=1.1, minNeighbors=5)
     if len(faces) > 0:
@@ -30,12 +42,9 @@ def detectar_rosto(img, face_cascade):
     return None, None, None, None
 
 
-def extrair_features(imagem_path):
+def extrair_features_cores(imagem_path, img):
+    """Extrai features de cores (linha preta)"""
     colors = colorgram.extract(imagem_path, 6)
-    
-    with open(imagem_path, 'rb') as f:
-        file_bytes = np.frombuffer(f.read(), dtype=np.uint8)
-        img = cv2.imdecode(file_bytes, cv2.IMREAD_COLOR)
     
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     altura, largura = img.shape[:2]
@@ -57,15 +66,15 @@ def extrair_features(imagem_path):
     preto_borda_inferior = (np.sum(mask_preto[borda_inf:, :]) / ((altura - borda_inf) * largura)) * 100
     
     cores_pretas = sum(
-        1 for color in colors if color.rgb.r < 50 and color.rgb.g < 50 and color.rgb.b < 50
+        1 for color in colors 
+        if color.rgb.r < 50 and color.rgb.g < 50 and color.rgb.b < 50
     )
-
+    
     cor1_media = (colors[0].rgb.r + colors[0].rgb.g + colors[0].rgb.b) / 3
     cor2_media = (colors[1].rgb.r + colors[1].rgb.g + colors[1].rgb.b) / 3
     cor3_media = (colors[2].rgb.r + colors[2].rgb.g + colors[2].rgb.b) / 3
     
     return {
-        'arquivo': os.path.basename(imagem_path),
         'porcentagem_preto': round(porcentagem_preto, 2),
         'max_preto_linha': round(max_preto_linha, 2),
         'preto_borda_superior': round(preto_borda_superior, 2),
@@ -78,74 +87,95 @@ def extrair_features(imagem_path):
 
 
 def extrair_texto(img):
-    """OCR usando EasyOCR (sem Tesseract)."""
     resultado = reader.readtext(img, detail=0)
     return " ".join(resultado)
+
 
 def contar_palavras(texto):
     return len(texto.split())
 
+
 def processar_imagem(caminho, face_cascade):
-    img = cv2.imread(caminho)
+    """Processa uma imagem completa e extrai todas as features"""
+    with open(caminho, 'rb') as f:
+        file_bytes = np.frombuffer(f.read(), dtype=np.uint8)
+        img = cv2.imdecode(file_bytes, cv2.IMREAD_COLOR)
+    
+    if img is None:
+        return None
+    
+    nome_arquivo = os.path.basename(caminho)
+    
     x, y, w, h = detectar_rosto(img, face_cascade)
-    texto = extrair_texto(caminho)  # EasyOCR aceita path OU imagem
+    
+    features_cores = extrair_features_cores(caminho, img)
+    
+    texto = extrair_texto(img)
     quantidade_palavras = contar_palavras(texto)
-
-    return {
-        "nome_arquivo": os.path.basename(caminho),
-        "x_face": x,
-        "y_face": y,
-        "w_face": w,
-        "h_face": h,
-        "texto_extraido": texto.strip(),
-        "quantidade_palavras": quantidade_palavras
+    
+    texto_lower = texto.lower().split()
+    freq_proibido = texto_lower.count("proibido")
+    freq_plastificar = texto_lower.count("plastificar")
+    features = {
+        'nome_arquivo': nome_arquivo,
+        'x_face': x,
+        'y_face': y,
+        'w_face': w,
+        'h_face': h,
+        **features_cores,  
+        'texto_extraido': texto.strip(),
+        'quantidade_palavras': quantidade_palavras,
+        'proibido': freq_proibido,
+        'plastificar': freq_plastificar
     }
-
-def obter_bag_palavras():
-    return ["proibido", "plastificar"]
-
-def gerar_features_bag_palavras(df, bag_palavras):
-    for palavra in bag_palavras:
-        df[palavra] = df["texto_extraido"].apply(
-            lambda texto: texto.lower().split().count(palavra.lower())
-        )
-    return df
+    
+    return features
 
 
 def main():
-
     pasta_imagens = Path(
-        r"C:\Users\matos\OneDrive\Documentos\sistemas_inteligentes_classificador_CNH\Classificador-de-Documentos-CNH-Fisica-x-CNH-Digital-\cnh_digital\imagens_transformadas_legiveis"
+        r"C:\Users\matos\OneDrive\Documentos\sistemas_inteligentes_classificador_CNH"
+        r"\Classificador-de-Documentos-CNH-Fisica-x-CNH-Digital-\cnh_digital"
+        r"\imagens_transformadas_legiveis"
     )
-
+    
     csv_saida = "features_CNH_digital.csv"
     cascade_path = cv2.data.haarcascades + "haarcascade_frontalface_default.xml"
     face_cascade = cv2.CascadeClassifier(cascade_path)
-
-    caminhos_imagens = carregar_imagens(pasta_imagens)
-
-    if not caminhos_imagens:
-        print("Nenhuma imagem encontrada. Verifique o caminho.")
-        return
-
-    resultados = [processar_imagem(c, face_cascade) for c in caminhos_imagens]
     
-    # teste
-    for caminho in caminhos_imagens:
-        print(f"\nProcessando: {os.path.basename(caminho)}")
-        info_basica = processar_imagem(caminho, face_cascade)
-        features_visuais = extrair_features(caminho)
-        info_completo = {**info_basica, **features_visuais}
+    print("CARREGANDO IMAGENS")
+    caminhos_imagens = carregar_imagens(pasta_imagens)
+    
+    if not caminhos_imagens:
+        print("\nNenhuma imagem encontrada. Verifique o caminho.")
+        return
+    
+    print(f"\n✓ {len(caminhos_imagens)} imagens carregadas")
+    print("PROCESSANDO IMAGENS")
+    
+    resultados = []
+    for i, caminho in enumerate(caminhos_imagens, 1):
+        print(f"\n[{i}/{len(caminhos_imagens)}] {os.path.basename(caminho)}")
+        
+        features = processar_imagem(caminho, face_cascade)
+        
+        if features:
+            resultados.append(features)
+            print(f"  ✓ Features extraídas com sucesso")
+        else:
+            print(f"  ✗ Falha ao processar")
+    
+    if resultados:
+        df = pd.DataFrame(resultados)
+        df.to_csv(csv_saida, index=False, encoding="utf-8")
+        
+        print("CSV GERADO COM SUCESSO!")
+        print(f"Arquivo: {csv_saida}")
+        print(f"Total de imagens processadas: {len(resultados)}")
+        print(f"Total de features: {len(df.columns)}")
+    else:
+        print("\n Nenhuma imagem foi processada com sucesso!")
 
-        resultados.append(info_completo)
-
-    df = pd.DataFrame(resultados)
-
-    bag_palavras = obter_bag_palavras()
-    df = gerar_features_bag_palavras(df, bag_palavras)
-
-    df.to_csv(csv_saida, index=False, encoding="utf-8")
-    print(f"CSV gerado com features: {csv_saida}")
 
 if __name__ == "__main__":
     main()
