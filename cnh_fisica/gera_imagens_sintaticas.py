@@ -7,7 +7,7 @@ import glob
 script_dir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_dir)  
 
-quantidade_imagens = 100
+quantidade_imagens = 50
 imagem_base = 'CNHFisica.jpg'
 csv_arquivo = 'dados_fakes.csv'
 json_arquivo = 'posicoes.json'
