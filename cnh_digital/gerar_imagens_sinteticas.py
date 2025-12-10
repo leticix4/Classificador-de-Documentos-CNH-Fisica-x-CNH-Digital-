@@ -7,7 +7,7 @@ import glob
 script_dir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_dir)  
 
-quantidade_imagens = 10
+quantidade_imagens = 1000
 imagem_base = 'cnh_img_base_digital.png'
 csv_arquivo = 'dados_fakes.csv'
 json_arquivo = 'posicoes_digital.json'
@@ -84,12 +84,9 @@ def adicionar_assinatura(imagem, assinatura_valor, posicao=(600, 1400), tamanho=
 
         texto = str(assinatura_valor) if assinatura_valor is not None else "Assinatura Fictícia"
         font = cv2.FONT_HERSHEY_SCRIPT_COMPLEX
-        # estima tamanho da fonte para caber na largura desejada
-        # encontra maior fontScale que caiba na largura max_w
         font_scale = 1.0
         thickness = 2
         (tw, th), _ = cv2.getTextSize(texto, font, font_scale, thickness)
-        # ajusta scale baseado em largura e altura
         if tw > 0:
             scale_w = max_w / tw
         else:
@@ -123,9 +120,7 @@ def gerar_imagens(quantidade_imagens, imagem_base, csv_arquivo,
     cor_fonte = (0, 0, 0)
     fonte = cv2.FONT_HERSHEY_DUPLEX
 
-    print("="*70)
     print("INICIANDO GERADOR DE CNH COM FOTOS E ASSINATURAS")
-    print("="*70)
     print(f"\nDiretório de trabalho: {os.getcwd()}\n")
     print("Verificando arquivos necessários...")
     for arquivo in [imagem_base, csv_arquivo, json_arquivo]:
@@ -143,13 +138,13 @@ def gerar_imagens(quantidade_imagens, imagem_base, csv_arquivo,
         leitor = csv.DictReader(f)
         for linha in leitor:
             dados_csv.append(linha)
-    print(f" {len(dados_csv)} registros carregados")
+    print(f"{len(dados_csv)} registros carregados")
     with open(json_arquivo, 'r', encoding='utf-8') as f:
         dados_json = json.load(f)
-    print(f"✓ {len(dados_json)} posições carregadas")
+    print(f"{len(dados_json)} posições carregadas")
 
     os.makedirs(pasta_saida, exist_ok=True)
-    print(f"\n📂 Pasta de saída: {os.path.abspath(pasta_saida)}")
+    print(f"\nPasta de saída: {os.path.abspath(pasta_saida)}")
 
     quantidade_imagens = min(quantidade_imagens, len(dados_csv))
 
@@ -171,11 +166,9 @@ def gerar_imagens(quantidade_imagens, imagem_base, csv_arquivo,
     for ext in extensoes:
         imagens_assin.extend(glob.glob(os.path.join(pasta_assinaturas, ext)))
     if imagens_assin:
-        print(f"✓ {len(imagens_assin)} imagens de assinatura encontradas (usar se CSV não apontar arquivo específico).")
+        print(f"{len(imagens_assin)} imagens de assinatura encontradas (usar se CSV não apontar arquivo específico).")
 
-    print(f"\n{'='*70}")
     print(f"GERANDO {quantidade_imagens} IMAGENS")
-    print(f"{'='*70}\n")
 
     for id_item, dado in enumerate(dados_csv[:quantidade_imagens], start=1):
         print(f"\n--- Imagem {id_item}/{quantidade_imagens} ---")
@@ -183,7 +176,7 @@ def gerar_imagens(quantidade_imagens, imagem_base, csv_arquivo,
         if imagem is None:
             print(f"ERRO: Não foi possível carregar '{imagem_base}'")
             return
-        print(f"✓ CNH base carregada: {imagem.shape[1]}x{imagem.shape[0]} pixels")
+        print(f"CNH base carregada: {imagem.shape[1]}x{imagem.shape[0]} pixels")
 
         # add textos (campos encontrados)
         for campo in campos:
@@ -213,14 +206,11 @@ def gerar_imagens(quantidade_imagens, imagem_base, csv_arquivo,
                 if os.path.exists(possivel2):
                     assinatura_valor = possivel2
                 else:
-                    # se não existir como arquivo, trate como texto (nome ou token)
                     assinatura_valor = possivel
 
-        # se CSV não definiu assinatura e houver imagens em pasta_assinaturas, use uma com base no índice
         if assinatura_valor is None and imagens_assin:
             assinatura_valor = imagens_assin[(id_item - 1) % len(imagens_assin)]
 
-        # definir posição da assinatura: tenta usar chave 'pos_assinatura' no json; senão usa default
         if 'pos_assinatura' in dados_json:
             pos_ass = tuple(dados_json['pos_assinatura'])
         elif 'assinatura' in dados_json:
@@ -228,7 +218,7 @@ def gerar_imagens(quantidade_imagens, imagem_base, csv_arquivo,
         else:
             pos_ass = (600, 1400)
 
-        tamanho_assin = (100, 50)  # ajuste se precisar
+        tamanho_assin = (100, 50)  
         print(f"Adicionando assinatura (valor: {assinatura_valor}) em {pos_ass}")
         imagem = adicionar_assinatura(imagem, assinatura_valor, posicao=pos_ass, tamanho=tamanho_assin, alpha=0.9)
 
@@ -238,10 +228,7 @@ def gerar_imagens(quantidade_imagens, imagem_base, csv_arquivo,
             print(f"Salva: {nome_saida}")
         else:
             print(f"ERRO ao salvar: {nome_saida}")
-
-    print(f"\n{'='*70}")
     print(f"CONCLUÍDO! {quantidade_imagens} imagens geradas")
-    print(f"{'='*70}")
 try:
     gerar_imagens(quantidade_imagens, imagem_base, csv_arquivo,
                   json_arquivo, pasta_saida)
