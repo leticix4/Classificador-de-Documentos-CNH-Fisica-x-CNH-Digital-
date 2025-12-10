@@ -11,7 +11,7 @@ quantidade_imagens = 1000
 imagem_base = 'cnh_img_base_digital.png'
 csv_arquivo = 'dados_fakes.csv'
 json_arquivo = 'posicoes_digital.json'
-pasta_saida = 'imagens_geradas'
+pasta_saida = 'imagens_geradas_digital'
 pasta_faces = '../imagens_faces'
 pasta_assinaturas = 'assinaturas'
 

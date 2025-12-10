@@ -13,8 +13,8 @@ def imwrite_unicode(path, img):
     encoded.tofile(path)
 
 pasta_cnh_digital = r"C:\Users\matos\OneDrive\Área de Trabalho\sistemas_inteligentes_classificador_CNH\Classificador-de-Documentos-CNH-Fisica-x-CNH-Digital-\cnh_digital"
-pasta_entrada = os.path.join(pasta_cnh_digital, "imagens_geradas")
-pasta_saida = os.path.join(pasta_cnh_digital, "imagens_transformadas_inelegiveis")
+pasta_entrada = r"C:\Users\matos\OneDrive\Documentos\sistemas_inteligentes_classificador_CNH\Classificador-de-Documentos-CNH-Fisica-x-CNH-Digital-\cnh_digital\imagens_geradas_digital"
+pasta_saida = r"C:\Users\matos\OneDrive\Documentos\sistemas_inteligentes_classificador_CNH\Classificador-de-Documentos-CNH-Fisica-x-CNH-Digital-\cnh_digital\imagens_transformadas_inelegiveis"
 
 os.makedirs(pasta_saida, exist_ok=True)
 
