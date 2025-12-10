@@ -23,7 +23,7 @@ def carregar_imagens(pasta_imagens):
                 
                 if img is not None:
                     caminhos.append(caminho)
-                    print(f"Carregada")
+                    print(f"  ✓ Carregada")
                 else:
                     print(f"Falha ao decodificar")
             except Exception as e:
